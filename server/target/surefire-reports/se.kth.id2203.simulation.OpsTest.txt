@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: se.kth.id2203.simulation.OpsTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.113 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.434 sec
