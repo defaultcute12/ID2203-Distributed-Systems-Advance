@@ -29,10 +29,10 @@ import se.kth.id2203.kvstore.OpResponse.Code;
 import se.kth.id2203.networking.Message;
 import se.kth.id2203.networking.NetAddress;
 import se.kth.id2203.overlay.Routing;
-import se.sics.kompics.ClassMatchedHandler;
-import se.sics.kompics.ComponentDefinition;
-import se.sics.kompics.Positive;
+import se.sics.kompics.*;
 import se.sics.kompics.network.Network;
+
+import java.util.HashMap;
 
 /**
  *
@@ -46,13 +46,21 @@ public class KVService extends ComponentDefinition {
     protected final Positive<Routing> route = requires(Routing.class);
     //******* Fields ******
     final NetAddress self = config().getValue("id2203.project.address", NetAddress.class);
+    protected HashMap<String, String> kvstore = new HashMap<String, String>() {
+        {
+            put("1", "Hello");
+            put("20", "There");
+            put("33", "My");
+            put("10", "Friend");
+        }
+    };
     //******* Handlers ******
     protected final ClassMatchedHandler<Operation, Message> opHandler = new ClassMatchedHandler<Operation, Message>() {
 
         @Override
         public void handle(Operation content, Message context) {
-            LOG.info("Got operation {}! Now implement me please :)", content);
-            trigger(new Message(self, context.getSource(), new OpResponse(content.id, Code.NOT_IMPLEMENTED)), net);
+            String response = kvstore.get(content.key);
+            trigger(new Message(self, context.getSource(), new OpResponse(content.id, response, Code.OK)), net);
         }
 
     };
@@ -60,5 +68,4 @@ public class KVService extends ComponentDefinition {
     {
         subscribe(opHandler, net);
     }
-
 }

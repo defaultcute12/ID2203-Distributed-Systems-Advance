@@ -29,9 +29,9 @@ import java.util.Set;
 import java.util.UUID;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import se.kth.id2203.bootstrapping.BootstrapServer.State;
 import se.kth.id2203.networking.Message;
 import se.kth.id2203.networking.NetAddress;
+import se.kth.id2203.overlay.Elect;
 import se.sics.kompics.ClassMatchedHandler;
 import se.sics.kompics.ComponentDefinition;
 import se.sics.kompics.Handler;
@@ -87,6 +87,7 @@ public class BootstrapServer extends ComponentDefinition {
                     state = State.DONE;
                 }
             } else if (state == State.DONE) {
+                trigger(new Elect(self), boot);
                 suicide();
             }
         }

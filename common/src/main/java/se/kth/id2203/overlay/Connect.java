@@ -44,7 +44,7 @@ public class Connect implements KompicsEvent, Serializable {
     public Ack ack(int clusterSize) {
         return new Ack(id, clusterSize);
     }
-    
+
     public static class Ack implements KompicsEvent, Serializable {
 
         private static final long serialVersionUID = -8702183971999213125L;

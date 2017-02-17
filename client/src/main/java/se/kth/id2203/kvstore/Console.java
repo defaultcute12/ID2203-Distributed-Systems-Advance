@@ -63,7 +63,7 @@ public class Console implements Runnable {
     }
 
     {
-        commands.put("op", new Command() {
+        commands.put("get", new Command() {
 
             @Override
             public boolean execute(String[] cmdline, ClientService worker) {
@@ -72,7 +72,8 @@ public class Console implements Runnable {
                     out.println("Operation sent! Awaiting response...");
                     try {
                         OpResponse r = fr.get();
-                        out.println("Operation complete! Response was: " + r.status);
+                        out.println("Response: " + r);
+                        out.println("Operation complete! Status was: " + r.status + " and response " + r.response);
                         return true;
                     } catch (InterruptedException | ExecutionException ex) {
                         ex.printStackTrace(out);

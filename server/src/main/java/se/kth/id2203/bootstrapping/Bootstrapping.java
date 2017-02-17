@@ -23,11 +23,13 @@
  */
 package se.kth.id2203.bootstrapping;
 
+import se.kth.id2203.overlay.Elect;
 import se.sics.kompics.PortType;
 
 public class Bootstrapping extends PortType {
 
     {
+        indication(Elect.class);
         indication(GetInitialAssignments.class);
         indication(Booted.class);
         request(InitialAssignments.class);

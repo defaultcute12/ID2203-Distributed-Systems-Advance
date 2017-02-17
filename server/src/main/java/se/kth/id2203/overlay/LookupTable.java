@@ -27,6 +27,9 @@ import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Iterables;
 import com.google.common.collect.TreeMultimap;
 import java.util.Collection;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import se.kth.id2203.bootstrapping.NodeAssignment;
 import se.kth.id2203.networking.NetAddress;
 
@@ -36,12 +39,16 @@ import se.kth.id2203.networking.NetAddress;
  */
 public class LookupTable implements NodeAssignment {
 
+    final static Logger LOG = LoggerFactory.getLogger(LookupTable.class);
+    static int REPLICATION_DEGREE = 1;
+    static int KEY_MAX = 100;
+
     private static final long serialVersionUID = -8766981433378303267L;
 
     private final TreeMultimap<Integer, NetAddress> partitions = TreeMultimap.create();
 
     public Collection<NetAddress> lookup(String key) {
-        int keyHash = key.hashCode();
+        int keyHash = key.hashCode() % KEY_MAX;
         Integer partition = partitions.keySet().floor(keyHash);
         if (partition == null) {
             partition = partitions.keySet().last();
@@ -69,8 +76,20 @@ public class LookupTable implements NodeAssignment {
 
     static LookupTable generate(ImmutableSet<NetAddress> nodes) {
         LookupTable lut = new LookupTable();
-        lut.partitions.putAll(0, nodes);
+        int num_nodes = nodes.size();
+        int num_partitions = num_nodes/REPLICATION_DEGREE;
+        float share = KEY_MAX/num_partitions;
+        int i = 0;
+        int j = 0;
+        for(i = 0; i < num_partitions; i++) {
+            for(j = 0; j < REPLICATION_DEGREE; j++) {
+                Float key = i*share;
+                LOG.info("Lookup table key: " + key + " and share " + share);
+                lut.partitions.put(key.intValue(), nodes.asList().get(i*REPLICATION_DEGREE+j));
+            }
+        }
+
+        //lut.partitions.putAll(0, nodes);
         return lut;
     }
-
 }

@@ -3,7 +3,7 @@
 #     File Name           :     setup.sh                                      #
 #     Created By          :     Klas Segeljakt                                #
 #     Creation Date       :     [2017-02-07 13:12]                            #
-#     Last Modified       :     [2017-02-07 17:48]                            #
+#     Last Modified       :     [2017-02-07 19:38]                            #
 #     Description         :     Setup script for project.                     #
 ###############################################################################
 

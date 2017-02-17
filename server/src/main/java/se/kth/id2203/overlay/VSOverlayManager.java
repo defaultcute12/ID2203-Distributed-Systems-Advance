@@ -27,10 +27,7 @@ import com.larskroll.common.J6;
 import java.util.Collection;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import se.kth.id2203.bootstrapping.Booted;
-import se.kth.id2203.bootstrapping.Bootstrapping;
-import se.kth.id2203.bootstrapping.GetInitialAssignments;
-import se.kth.id2203.bootstrapping.InitialAssignments;
+import se.kth.id2203.bootstrapping.*;
 import se.kth.id2203.networking.Message;
 import se.kth.id2203.networking.NetAddress;
 import se.sics.kompics.ClassMatchedHandler;
@@ -55,6 +52,7 @@ public class VSOverlayManager extends ComponentDefinition {
 
     final static Logger LOG = LoggerFactory.getLogger(VSOverlayManager.class);
     //******* Ports ******
+    protected boolean is_leader = false;
     protected final Negative<Routing> route = provides(Routing.class);
     protected final Positive<Bootstrapping> boot = requires(Bootstrapping.class);
     protected final Positive<Network> net = requires(Network.class);
@@ -118,6 +116,19 @@ public class VSOverlayManager extends ComponentDefinition {
             }
         }
     };
+    protected final Handler<Elect> electHandler = new Handler<Elect>() {
+
+        @Override
+        public void handle(Elect elect) {
+            if(elect.leaderAddress.equals(self)) {
+                is_leader = true;
+                LOG.info("I am the leader.");
+            } else {
+                is_leader = false;
+                LOG.info("I should not be the leader.");
+            }
+        }
+    };
 
     {
         subscribe(initialAssignmentHandler, boot);
@@ -125,5 +136,6 @@ public class VSOverlayManager extends ComponentDefinition {
         subscribe(routeHandler, net);
         subscribe(localRouteHandler, route);
         subscribe(connectHandler, net);
+        subscribe(electHandler, boot);
     }
 }

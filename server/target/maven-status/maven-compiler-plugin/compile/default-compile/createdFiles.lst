@@ -7,6 +7,7 @@ se/kth/id2203/Main.class
 se/kth/id2203/bootstrapping/BootstrapServer$3.class
 se/kth/id2203/bootstrapping/Boot.class
 se/kth/id2203/overlay/VSOverlayManager$4.class
+se/kth/id2203/kvstore/KVService$2.class
 se/kth/id2203/overlay/Routing.class
 se/kth/id2203/bootstrapping/NodeAssignment.class
 se/kth/id2203/bootstrapping/BootstrapServer$1.class

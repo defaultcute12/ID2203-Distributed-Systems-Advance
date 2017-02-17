@@ -28,7 +28,6 @@ public class ParentComponent
     protected final Component boot;
 
     {
-
         Optional<NetAddress> serverO = config().readValue("id2203.project.bootstrap-address", NetAddress.class);
         if (serverO.isPresent()) { // start in client mode
             boot = create(BootstrapClient.class, Init.NONE);
