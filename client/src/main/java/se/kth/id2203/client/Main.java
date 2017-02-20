@@ -55,11 +55,13 @@ public class Main {
 
     public static void main(String[] args) {
         Options opts = prepareOptions();
+
         HelpFormatter formatter = new HelpFormatter();
         CommandLine cmd;
         try {
             CommandLineParser cliparser = new DefaultParser();
             cmd = cliparser.parse(opts, args);
+
             // avoid constant conversion of the address by converting once and reassigning
             Config.Impl c = (Config.Impl) Kompics.getConfig();
             NetAddress self = c.getValue("id2203.project.address", NetAddress.class);
