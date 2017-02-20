@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="1" name="se.kth.id2203.simulation.OpsTest" time="2.142" errors="0" skipped="0">
+<testsuite tests="1" failures="1" name="se.kth.id2203.simulation.OpsTest" time="6.736" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib"/>
@@ -63,8 +63,8 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="se.kth.id2203.simulation.OpsTest" name="simpleOpsTest" time="2.142">
-    <failure message="null expected:&lt;[NOT_IMPLEMENTED]&gt; but was:&lt;[OK]&gt;" type="junit.framework.ComparisonFailure">junit.framework.ComparisonFailure: null expected:&lt;[NOT_IMPLEMENTED]&gt; but was:&lt;[OK]&gt;
+  <testcase classname="se.kth.id2203.simulation.OpsTest" name="simpleOpsTest" time="6.736">
+    <failure message="null expected:&lt;NOT_IMPLEMENTED&gt; but was:&lt;null&gt;" type="junit.framework.ComparisonFailure">junit.framework.ComparisonFailure: null expected:&lt;NOT_IMPLEMENTED&gt; but was:&lt;null&gt;
 	at junit.framework.Assert.assertEquals(Assert.java:81)
 	at junit.framework.Assert.assertEquals(Assert.java:87)
 	at se.kth.id2203.simulation.OpsTest.simpleOpsTest(OpsTest.java:48)
@@ -99,25 +99,25 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 </failure>
-    <system-out>11:58:06,215 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
-11:58:06,215 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
-11:58:06,215 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/Users/Klas/Library/Mobile%20Documents/com~apple~CloudDocs/KTH/dsac/project/id2203-project/server/target/test-classes/logback.xml]
-11:58:06,215 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs multiple times on the classpath.
-11:58:06,215 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [file:/Users/Klas/Library/Mobile%20Documents/com~apple~CloudDocs/KTH/dsac/project/id2203-project/server/target/classes/logback.xml]
-11:58:06,215 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [file:/Users/Klas/Library/Mobile%20Documents/com~apple~CloudDocs/KTH/dsac/project/id2203-project/server/target/test-classes/logback.xml]
-11:58:06,349 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
-11:58:06,362 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
-11:58:06,373 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [CONSOLE]
-11:58:06,387 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
-11:58:06,445 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [Kompics] to INFO
-11:58:06,445 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [se.sics.kompics.timer.java.JavaTimer] to INFO
-11:58:06,445 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [se.kth.id2203] to DEBUG
-11:58:06,445 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to TRACE
-11:58:06,445 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [CONSOLE] to Logger[ROOT]
-11:58:06,446 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
-11:58:06,447 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@3bfdc050 - Registering current configuration as safe fallback point
+    <system-out>20:10:16,689 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
+20:10:16,690 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+20:10:16,690 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/Users/Klas/Library/Mobile%20Documents/com~apple~CloudDocs/KTH/dsac/project/id2203-project/server/target/test-classes/logback.xml]
+20:10:16,694 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs multiple times on the classpath.
+20:10:16,694 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [file:/Users/Klas/Library/Mobile%20Documents/com~apple~CloudDocs/KTH/dsac/project/id2203-project/server/target/classes/logback.xml]
+20:10:16,694 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [file:/Users/Klas/Library/Mobile%20Documents/com~apple~CloudDocs/KTH/dsac/project/id2203-project/server/target/test-classes/logback.xml]
+20:10:17,315 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
+20:10:17,551 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+20:10:17,572 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [CONSOLE]
+20:10:17,600 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+20:10:17,701 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [Kompics] to INFO
+20:10:17,701 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [se.sics.kompics.timer.java.JavaTimer] to INFO
+20:10:17,701 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [se.kth.id2203] to DEBUG
+20:10:17,701 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to TRACE
+20:10:17,702 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [CONSOLE] to Logger[ROOT]
+20:10:17,702 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+20:10:17,706 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@3bfdc050 - Registering current configuration as safe fallback point
 
-02/17 11:58:06 INFO [main] CodeInstrumentation - no user defined instrumentation exceptions detected
+02/20 20:10:18 INFO [main] CodeInstrumentation - no user defined instrumentation exceptions detected
 00:00:00,001 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
 00:00:00,001 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
 00:00:00,001 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/Users/Klas/Library/Mobile%20Documents/com~apple~CloudDocs/KTH/dsac/project/id2203-project/server/target/test-classes/logback.xml]
@@ -143,167 +143,84 @@
 01/01 00:00:00 DEBUG[main] s.s.k.s.c.i.P2pSimulator - Started:Process0
 01/01 00:00:00 TRACE[main] s.s.k.s.c.i.P2pSimulator - sending:Process0-StartNode&lt;/192.168.0.1:45678&gt;
 01/01 00:00:00 DEBUG[main] s.s.k.s.c.i.SimulatorMngrComp - received start:StartNode&lt;/192.168.0.1:45678&gt; for node:/192.168.0.1:45678
-01/01 00:00:00 INFO [main] s.k.i.b.BootstrapServer - Starting bootstrap server on /192.168.0.1:45678, waiting for 3 nodes...
-01/01 00:00:00 DEBUG[main] s.s.k.s.c.i.P2pSimulator - schedulePeriodicTimeout@4000 : se.kth.id2203.bootstrapping.BSTimeout@7fb4f2a9
+01/01 00:00:00 ERROR[main] Kompics - Handling an event caused a fault! Might be handled later...
+java.lang.RuntimeException: se.kth.id2203.kvstore.KVService@5c86a017 has no negative se.kth.id2203.overlay.Routing
+	at se.sics.kompics.JavaComponent.getNegative(JavaComponent.java:110)
+	at se.kth.id2203.ParentComponent.&lt;init&gt;(ParentComponent.java:48)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at java.lang.Class.newInstance(Class.java:442)
+	at se.sics.kompics.JavaComponent.createInstance(JavaComponent.java:255)
+	at se.sics.kompics.JavaComponent.doCreate(JavaComponent.java:226)
+	at se.sics.kompics.ComponentDefinition.create(ComponentDefinition.java:236)
+	at se.sics.kompics.simulator.core.impl.SimulatorMngrComp.access$400(SimulatorMngrComp.java:59)
+	at se.sics.kompics.simulator.core.impl.SimulatorMngrComp$4.handle(SimulatorMngrComp.java:150)
+	at se.sics.kompics.simulator.core.impl.SimulatorMngrComp$4.handle(SimulatorMngrComp.java:133)
+	at se.sics.kompics.JavaComponent.executeEvent(JavaComponent.java:389)
+	at se.sics.kompics.JavaComponent.execute(JavaComponent.java:333)
+	at se.sics.kompics.Scheduler.executeComponent(Scheduler.java:15)
+	at se.sics.kompics.simulator.scheduler.BasicSimulationScheduler.proceed(BasicSimulationScheduler.java:55)
+	at se.sics.kompics.Kompics.createAndStart(Kompics.java:229)
+	at se.sics.kompics.Kompics.createAndStart(Kompics.java:156)
+	at se.sics.kompics.simulator.run.LauncherComp.main(LauncherComp.java:57)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at javassist.Loader.run(Loader.java:288)
+	at se.sics.kompics.simulator.SimulationScenario.simulate(SimulationScenario.java:359)
+	at se.sics.kompics.simulator.SimulationScenario.simulate(SimulationScenario.java:333)
+	at se.kth.id2203.simulation.OpsTest.simpleOpsTest(OpsTest.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:73)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:46)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:180)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:41)
+	at org.junit.runners.ParentRunner$1.evaluate(ParentRunner.java:173)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:220)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+01/01 00:00:00 ERROR[main] Kompics - A fault was escalated to the root component: 
+KompicsFault(java.lang.RuntimeException: se.kth.id2203.kvstore.KVService@5c86a017 has no negative se.kth.id2203.overlay.Routing thrown in Component(98f8ba3d-c812-a76d-554d-cd2b40b5f04b):se.sics.kompics.simulator.core.impl.SimulatorMngrComp@2e385cce while handling event StartNode&lt;/192.168.0.1:45678&gt;) 
+
+
 01/01 00:00:01 TRACE[main] s.s.k.s.c.i.P2pSimulator - sending:Process0-StartNode&lt;/192.168.0.2:45678&gt;
-01/01 00:00:01 DEBUG[main] s.s.k.s.c.i.SimulatorMngrComp - received start:StartNode&lt;/192.168.0.2:45678&gt; for node:/192.168.0.2:45678
-01/01 00:00:01 DEBUG[main] s.k.i.b.BootstrapClient - Starting bootstrap client on /192.168.0.2:45678
-01/01 00:00:01 DEBUG[main] s.s.k.s.c.i.P2pSimulator - schedulePeriodicTimeout@4000 : se.kth.id2203.bootstrapping.BSTimeout@169bb4dd
 01/01 00:00:02 TRACE[main] s.s.k.s.c.i.P2pSimulator - sending:Process0-StartNode&lt;/192.168.0.3:45678&gt;
+01/01 00:00:02 INFO [Thread-0] Kompics - User declared that Fault KompicsFault(java.lang.RuntimeException: se.kth.id2203.kvstore.KVService@5c86a017 has no negative se.kth.id2203.overlay.Routing thrown in Component(98f8ba3d-c812-a76d-554d-cd2b40b5f04b):se.sics.kompics.simulator.core.impl.SimulatorMngrComp@2e385cce while handling event StartNode&lt;/192.168.0.1:45678&gt;) should quit Kompics...
 01/01 00:00:02 DEBUG[main] s.s.k.s.c.i.P2pSimulator - Terminated process:Process0
-01/01 00:00:02 DEBUG[main] s.s.k.s.c.i.SimulatorMngrComp - received start:StartNode&lt;/192.168.0.3:45678&gt; for node:/192.168.0.3:45678
-01/01 00:00:02 DEBUG[main] s.k.i.b.BootstrapClient - Starting bootstrap client on /192.168.0.3:45678
-01/01 00:00:02 DEBUG[main] s.s.k.s.c.i.P2pSimulator - schedulePeriodicTimeout@4000 : se.kth.id2203.bootstrapping.BSTimeout@14dd7b39
-01/01 00:00:04 DEBUG[main] s.s.k.s.c.i.P2pSimulator - triggered [periodic] timeout:se.kth.id2203.bootstrapping.BSTimeout&lt;40bcf2e6-a009-97a4-4931-0e6c6929f09b&gt;
-01/01 00:00:04 INFO [main] s.k.i.b.BootstrapServer - 1 hosts in active set.
-01/01 00:00:05 DEBUG[main] s.s.k.s.c.i.P2pSimulator - triggered [periodic] timeout:se.kth.id2203.bootstrapping.BSTimeout&lt;154393cf-2f9d-04a6-fa83-d9074e8f1ba9&gt;
-01/01 00:00:05 DEBUG[main] s.s.k.s.c.i.P2pSimulator - sending msg:se.kth.id2203.networking.Message@51891008 from:/192.168.0.2:45678 to:/192.168.0.1:45678
-01/01 00:00:05 TRACE[main] s.s.k.s.c.i.P2pSimulator - delivered network msg:se.kth.id2203.networking.Message@51891008 from:/192.168.0.2:45678 to:/192.168.0.1:45678
-01/01 00:00:06 DEBUG[main] s.s.k.s.c.i.P2pSimulator - triggered [periodic] timeout:se.kth.id2203.bootstrapping.BSTimeout&lt;88aa034a-9cd2-1d83-0b81-78402dd2283a&gt;
-01/01 00:00:06 DEBUG[main] s.s.k.s.c.i.P2pSimulator - sending msg:se.kth.id2203.networking.Message@2f953efd from:/192.168.0.3:45678 to:/192.168.0.1:45678
-01/01 00:00:06 TRACE[main] s.s.k.s.c.i.P2pSimulator - delivered network msg:se.kth.id2203.networking.Message@2f953efd from:/192.168.0.3:45678 to:/192.168.0.1:45678
-01/01 00:00:08 DEBUG[main] s.s.k.s.c.i.P2pSimulator - triggered [periodic] timeout:se.kth.id2203.bootstrapping.BSTimeout&lt;40bcf2e6-a009-97a4-4931-0e6c6929f09b&gt;
-01/01 00:00:08 INFO [main] s.k.i.b.BootstrapServer - 3 hosts in active set.
-01/01 00:00:08 INFO [main] s.k.i.b.BootstrapServer - Threshold reached. Generating assignments...
-01/01 00:00:08 INFO [main] s.k.i.o.VSOverlayManager - Generating LookupTable...
-01/01 00:00:08 DEBUG[main] s.k.i.o.VSOverlayManager - Generated assignments:
-LookupTable(
-0 -&gt; [/192.168.0.1:45678, /192.168.0.2:45678, /192.168.0.3:45678]
-)
-01/01 00:00:08 INFO [main] s.k.i.b.BootstrapServer - Seeding assignments...
-01/01 00:00:08 DEBUG[main] s.s.k.s.c.i.P2pSimulator - sending msg:se.kth.id2203.networking.Message@163370c2 from:/192.168.0.1:45678 to:/192.168.0.1:45678
-01/01 00:00:08 DEBUG[main] s.s.k.s.c.i.P2pSimulator - sending msg:se.kth.id2203.networking.Message@51bf5add from:/192.168.0.1:45678 to:/192.168.0.2:45678
-01/01 00:00:08 DEBUG[main] s.s.k.s.c.i.P2pSimulator - sending msg:se.kth.id2203.networking.Message@7905a0b8 from:/192.168.0.1:45678 to:/192.168.0.3:45678
-01/01 00:00:08 TRACE[main] s.s.k.s.c.i.P2pSimulator - delivered network msg:se.kth.id2203.networking.Message@163370c2 from:/192.168.0.1:45678 to:/192.168.0.1:45678
-01/01 00:00:08 TRACE[main] s.s.k.s.c.i.P2pSimulator - delivered network msg:se.kth.id2203.networking.Message@51bf5add from:/192.168.0.1:45678 to:/192.168.0.2:45678
-01/01 00:00:08 TRACE[main] s.s.k.s.c.i.P2pSimulator - delivered network msg:se.kth.id2203.networking.Message@7905a0b8 from:/192.168.0.1:45678 to:/192.168.0.3:45678
-01/01 00:00:08 INFO [main] s.k.i.b.BootstrapClient - /192.168.0.2:45678 Booting up.
-01/01 00:00:08 INFO [main] s.k.i.b.BootstrapClient - /192.168.0.3:45678 Booting up.
-01/01 00:00:08 INFO [main] s.k.i.o.VSOverlayManager - Got NodeAssignment, overlay ready.
-01/01 00:00:08 DEBUG[main] s.s.k.s.c.i.P2pSimulator - cancelPeriodicTimeout: 154393cf-2f9d-04a6-fa83-d9074e8f1ba9. APT=[154393cf-2f9d-04a6-fa83-d9074e8f1ba9, 40bcf2e6-a009-97a4-4931-0e6c6929f09b, 88aa034a-9cd2-1d83-0b81-78402dd2283a]
-01/01 00:00:08 INFO [main] s.k.i.o.VSOverlayManager - Got NodeAssignment, overlay ready.
-01/01 00:00:08 DEBUG[main] s.s.k.s.c.i.P2pSimulator - sending msg:se.kth.id2203.networking.Message@35a3d49f from:/192.168.0.2:45678 to:/192.168.0.1:45678
-01/01 00:00:08 DEBUG[main] s.s.k.s.c.i.P2pSimulator - cancelPeriodicTimeout: 88aa034a-9cd2-1d83-0b81-78402dd2283a. APT=[40bcf2e6-a009-97a4-4931-0e6c6929f09b, 88aa034a-9cd2-1d83-0b81-78402dd2283a]
-01/01 00:00:08 DEBUG[main] s.s.k.s.c.i.P2pSimulator - sending msg:se.kth.id2203.networking.Message@389b0789 from:/192.168.0.3:45678 to:/192.168.0.1:45678
-01/01 00:00:08 TRACE[main] s.s.k.s.c.i.P2pSimulator - delivered network msg:se.kth.id2203.networking.Message@35a3d49f from:/192.168.0.2:45678 to:/192.168.0.1:45678
-01/01 00:00:08 TRACE[main] s.s.k.s.c.i.P2pSimulator - delivered network msg:se.kth.id2203.networking.Message@389b0789 from:/192.168.0.3:45678 to:/192.168.0.1:45678
-01/01 00:00:12 DEBUG[main] s.s.k.s.c.i.P2pSimulator - triggered [periodic] timeout:se.kth.id2203.bootstrapping.BSTimeout&lt;40bcf2e6-a009-97a4-4931-0e6c6929f09b&gt;
 01/01 00:00:12 DEBUG[main] s.s.k.s.c.i.P2pSimulator - Started:Process1
 01/01 00:00:12 TRACE[main] s.s.k.s.c.i.P2pSimulator - sending:Process1-StartClient&lt;/192.168.1.1:45678&gt;
 01/01 00:00:12 DEBUG[main] s.s.k.s.c.i.P2pSimulator - Terminated process:Process1
-01/01 00:00:12 INFO [main] s.k.i.b.BootstrapServer - 3 hosts in ready set.
-01/01 00:00:12 INFO [main] s.k.i.b.BootstrapServer - Finished seeding. Bootstrapping complete.
-01/01 00:00:12 DEBUG[main] s.s.k.s.c.i.SimulatorMngrComp - received start:StartClient&lt;/192.168.1.1:45678&gt; for node:/192.168.1.1:45678
-01/01 00:00:12 INFO [main] s.k.i.o.VSOverlayManager - Got NodeAssignment, overlay ready.
-01/01 00:00:12 INFO [main] s.k.i.s.ScenarioClient - Sending Operation{id=652c49da-f201-5be7-c49d-0a5603a4fe56, key=test0}
-01/01 00:00:12 INFO [main] s.k.i.s.ScenarioClient - Sending Operation{id=9e568642-64ea-8630-9c95-2496da920844, key=test1}
-01/01 00:00:12 INFO [main] s.k.i.s.ScenarioClient - Sending Operation{id=064c72ea-c93a-13e5-ee10-94a9fe542dba, key=test2}
-01/01 00:00:12 INFO [main] s.k.i.s.ScenarioClient - Sending Operation{id=50f8fd89-e213-217d-7a93-6a022b9839e4, key=test3}
-01/01 00:00:12 INFO [main] s.k.i.s.ScenarioClient - Sending Operation{id=24cc79cd-f64a-260e-30cc-43ccb96b6625, key=test4}
-01/01 00:00:12 INFO [main] s.k.i.s.ScenarioClient - Sending Operation{id=e7817fb2-ad67-1514-4982-c967cdecdb80, key=test5}
-01/01 00:00:12 INFO [main] s.k.i.s.ScenarioClient - Sending Operation{id=a820db14-7101-5870-5210-b615764b6639, key=test6}
-01/01 00:00:12 INFO [main] s.k.i.s.ScenarioClient - Sending Operation{id=189c6082-da52-e6b2-78b3-6bea80783fbb, key=test7}
-01/01 00:00:12 INFO [main] s.k.i.s.ScenarioClient - Sending Operation{id=b681bb5b-fdef-f99a-916f-420cf82212bc, key=test8}
-01/01 00:00:12 INFO [main] s.k.i.s.ScenarioClient - Sending Operation{id=90c38917-5a65-28db-601d-021e0c199d9e, key=test9}
-01/01 00:00:12 DEBUG[main] s.s.k.s.c.i.P2pSimulator - sending msg:se.kth.id2203.networking.Message@6f8e8894 from:/192.168.1.1:45678 to:/192.168.0.1:45678
-01/01 00:00:12 DEBUG[main] s.s.k.s.c.i.P2pSimulator - sending msg:se.kth.id2203.networking.Message@3cfdd820 from:/192.168.1.1:45678 to:/192.168.0.1:45678
-01/01 00:00:12 DEBUG[main] s.s.k.s.c.i.P2pSimulator - sending msg:se.kth.id2203.networking.Message@928763c from:/192.168.1.1:45678 to:/192.168.0.1:45678
-01/01 00:00:12 DEBUG[main] s.s.k.s.c.i.P2pSimulator - sending msg:se.kth.id2203.networking.Message@e25951c from:/192.168.1.1:45678 to:/192.168.0.1:45678
-01/01 00:00:12 DEBUG[main] s.s.k.s.c.i.P2pSimulator - sending msg:se.kth.id2203.networking.Message@15f47664 from:/192.168.1.1:45678 to:/192.168.0.1:45678
-01/01 00:00:12 DEBUG[main] s.s.k.s.c.i.P2pSimulator - sending msg:se.kth.id2203.networking.Message@471a9022 from:/192.168.1.1:45678 to:/192.168.0.1:45678
-01/01 00:00:12 DEBUG[main] s.s.k.s.c.i.P2pSimulator - sending msg:se.kth.id2203.networking.Message@dc9876b from:/192.168.1.1:45678 to:/192.168.0.1:45678
-01/01 00:00:12 DEBUG[main] s.s.k.s.c.i.P2pSimulator - sending msg:se.kth.id2203.networking.Message@2f666ebb from:/192.168.1.1:45678 to:/192.168.0.1:45678
-01/01 00:00:12 DEBUG[main] s.s.k.s.c.i.P2pSimulator - sending msg:se.kth.id2203.networking.Message@19976a65 from:/192.168.1.1:45678 to:/192.168.0.1:45678
-01/01 00:00:12 DEBUG[main] s.s.k.s.c.i.P2pSimulator - sending msg:se.kth.id2203.networking.Message@a1f72f5 from:/192.168.1.1:45678 to:/192.168.0.1:45678
-01/01 00:00:12 TRACE[main] s.s.k.s.c.i.P2pSimulator - delivered network msg:se.kth.id2203.networking.Message@6f8e8894 from:/192.168.1.1:45678 to:/192.168.0.1:45678
-01/01 00:00:12 TRACE[main] s.s.k.s.c.i.P2pSimulator - delivered network msg:se.kth.id2203.networking.Message@3cfdd820 from:/192.168.1.1:45678 to:/192.168.0.1:45678
-01/01 00:00:12 TRACE[main] s.s.k.s.c.i.P2pSimulator - delivered network msg:se.kth.id2203.networking.Message@928763c from:/192.168.1.1:45678 to:/192.168.0.1:45678
-01/01 00:00:12 TRACE[main] s.s.k.s.c.i.P2pSimulator - delivered network msg:se.kth.id2203.networking.Message@e25951c from:/192.168.1.1:45678 to:/192.168.0.1:45678
-01/01 00:00:12 TRACE[main] s.s.k.s.c.i.P2pSimulator - delivered network msg:se.kth.id2203.networking.Message@15f47664 from:/192.168.1.1:45678 to:/192.168.0.1:45678
-01/01 00:00:12 TRACE[main] s.s.k.s.c.i.P2pSimulator - delivered network msg:se.kth.id2203.networking.Message@471a9022 from:/192.168.1.1:45678 to:/192.168.0.1:45678
-01/01 00:00:12 TRACE[main] s.s.k.s.c.i.P2pSimulator - delivered network msg:se.kth.id2203.networking.Message@dc9876b from:/192.168.1.1:45678 to:/192.168.0.1:45678
-01/01 00:00:12 TRACE[main] s.s.k.s.c.i.P2pSimulator - delivered network msg:se.kth.id2203.networking.Message@2f666ebb from:/192.168.1.1:45678 to:/192.168.0.1:45678
-01/01 00:00:12 TRACE[main] s.s.k.s.c.i.P2pSimulator - delivered network msg:se.kth.id2203.networking.Message@19976a65 from:/192.168.1.1:45678 to:/192.168.0.1:45678
-01/01 00:00:12 TRACE[main] s.s.k.s.c.i.P2pSimulator - delivered network msg:se.kth.id2203.networking.Message@a1f72f5 from:/192.168.1.1:45678 to:/192.168.0.1:45678
-01/01 00:00:12 INFO [main] s.k.i.o.VSOverlayManager - Forwarding message for key test0 to /192.168.0.1:45678
-01/01 00:00:12 DEBUG[main] s.s.k.s.c.i.P2pSimulator - sending msg:se.kth.id2203.networking.Message@75c56eb9 from:/192.168.1.1:45678 to:/192.168.0.1:45678
-01/01 00:00:12 INFO [main] s.k.i.o.VSOverlayManager - Forwarding message for key test1 to /192.168.0.1:45678
-01/01 00:00:12 DEBUG[main] s.s.k.s.c.i.P2pSimulator - sending msg:se.kth.id2203.networking.Message@4bc222e from:/192.168.1.1:45678 to:/192.168.0.1:45678
-01/01 00:00:12 INFO [main] s.k.i.o.VSOverlayManager - Forwarding message for key test2 to /192.168.0.2:45678
-01/01 00:00:12 DEBUG[main] s.s.k.s.c.i.P2pSimulator - sending msg:se.kth.id2203.networking.Message@2dc9b0f5 from:/192.168.1.1:45678 to:/192.168.0.2:45678
-01/01 00:00:12 INFO [main] s.k.i.o.VSOverlayManager - Forwarding message for key test3 to /192.168.0.2:45678
-01/01 00:00:12 DEBUG[main] s.s.k.s.c.i.P2pSimulator - sending msg:se.kth.id2203.networking.Message@6531a794 from:/192.168.1.1:45678 to:/192.168.0.2:45678
-01/01 00:00:12 INFO [main] s.k.i.o.VSOverlayManager - Forwarding message for key test4 to /192.168.0.1:45678
-01/01 00:00:12 DEBUG[main] s.s.k.s.c.i.P2pSimulator - sending msg:se.kth.id2203.networking.Message@3b5fad2d from:/192.168.1.1:45678 to:/192.168.0.1:45678
-01/01 00:00:12 INFO [main] s.k.i.o.VSOverlayManager - Forwarding message for key test5 to /192.168.0.2:45678
-01/01 00:00:12 DEBUG[main] s.s.k.s.c.i.P2pSimulator - sending msg:se.kth.id2203.networking.Message@5e17553a from:/192.168.1.1:45678 to:/192.168.0.2:45678
-01/01 00:00:12 INFO [main] s.k.i.o.VSOverlayManager - Forwarding message for key test6 to /192.168.0.2:45678
-01/01 00:00:12 DEBUG[main] s.s.k.s.c.i.P2pSimulator - sending msg:se.kth.id2203.networking.Message@3eb91815 from:/192.168.1.1:45678 to:/192.168.0.2:45678
-01/01 00:00:12 INFO [main] s.k.i.o.VSOverlayManager - Forwarding message for key test7 to /192.168.0.3:45678
-01/01 00:00:12 DEBUG[main] s.s.k.s.c.i.P2pSimulator - sending msg:se.kth.id2203.networking.Message@56dc1551 from:/192.168.1.1:45678 to:/192.168.0.3:45678
-01/01 00:00:12 INFO [main] s.k.i.o.VSOverlayManager - Forwarding message for key test8 to /192.168.0.1:45678
-01/01 00:00:12 DEBUG[main] s.s.k.s.c.i.P2pSimulator - sending msg:se.kth.id2203.networking.Message@102cec62 from:/192.168.1.1:45678 to:/192.168.0.1:45678
-01/01 00:00:12 INFO [main] s.k.i.o.VSOverlayManager - Forwarding message for key test9 to /192.168.0.1:45678
-01/01 00:00:12 DEBUG[main] s.s.k.s.c.i.P2pSimulator - sending msg:se.kth.id2203.networking.Message@74f6c5d8 from:/192.168.1.1:45678 to:/192.168.0.1:45678
-01/01 00:00:12 TRACE[main] s.s.k.s.c.i.P2pSimulator - delivered network msg:se.kth.id2203.networking.Message@75c56eb9 from:/192.168.1.1:45678 to:/192.168.0.1:45678
-01/01 00:00:12 TRACE[main] s.s.k.s.c.i.P2pSimulator - delivered network msg:se.kth.id2203.networking.Message@4bc222e from:/192.168.1.1:45678 to:/192.168.0.1:45678
-01/01 00:00:12 TRACE[main] s.s.k.s.c.i.P2pSimulator - delivered network msg:se.kth.id2203.networking.Message@2dc9b0f5 from:/192.168.1.1:45678 to:/192.168.0.2:45678
-01/01 00:00:12 TRACE[main] s.s.k.s.c.i.P2pSimulator - delivered network msg:se.kth.id2203.networking.Message@6531a794 from:/192.168.1.1:45678 to:/192.168.0.2:45678
-01/01 00:00:12 TRACE[main] s.s.k.s.c.i.P2pSimulator - delivered network msg:se.kth.id2203.networking.Message@3b5fad2d from:/192.168.1.1:45678 to:/192.168.0.1:45678
-01/01 00:00:12 TRACE[main] s.s.k.s.c.i.P2pSimulator - delivered network msg:se.kth.id2203.networking.Message@5e17553a from:/192.168.1.1:45678 to:/192.168.0.2:45678
-01/01 00:00:12 TRACE[main] s.s.k.s.c.i.P2pSimulator - delivered network msg:se.kth.id2203.networking.Message@3eb91815 from:/192.168.1.1:45678 to:/192.168.0.2:45678
-01/01 00:00:12 TRACE[main] s.s.k.s.c.i.P2pSimulator - delivered network msg:se.kth.id2203.networking.Message@56dc1551 from:/192.168.1.1:45678 to:/192.168.0.3:45678
-01/01 00:00:12 TRACE[main] s.s.k.s.c.i.P2pSimulator - delivered network msg:se.kth.id2203.networking.Message@102cec62 from:/192.168.1.1:45678 to:/192.168.0.1:45678
-01/01 00:00:12 TRACE[main] s.s.k.s.c.i.P2pSimulator - delivered network msg:se.kth.id2203.networking.Message@74f6c5d8 from:/192.168.1.1:45678 to:/192.168.0.1:45678
-01/01 00:00:12 INFO [main] s.k.i.k.KVService - Got operation Operation{id=652c49da-f201-5be7-c49d-0a5603a4fe56, key=test0}! Now implement me please :)
-01/01 00:00:12 INFO [main] s.k.i.k.KVService - Got operation Operation{id=064c72ea-c93a-13e5-ee10-94a9fe542dba, key=test2}! Now implement me please :)
-01/01 00:00:12 INFO [main] s.k.i.k.KVService - Got operation Operation{id=189c6082-da52-e6b2-78b3-6bea80783fbb, key=test7}! Now implement me please :)
-01/01 00:00:12 DEBUG[main] s.s.k.s.c.i.P2pSimulator - sending msg:se.kth.id2203.networking.Message@43015c69 from:/192.168.0.1:45678 to:/192.168.1.1:45678
-01/01 00:00:12 INFO [main] s.k.i.k.KVService - Got operation Operation{id=9e568642-64ea-8630-9c95-2496da920844, key=test1}! Now implement me please :)
-01/01 00:00:12 INFO [main] s.k.i.k.KVService - Got operation Operation{id=50f8fd89-e213-217d-7a93-6a022b9839e4, key=test3}! Now implement me please :)
-01/01 00:00:12 DEBUG[main] s.s.k.s.c.i.P2pSimulator - sending msg:se.kth.id2203.networking.Message@19b89d4 from:/192.168.0.2:45678 to:/192.168.1.1:45678
-01/01 00:00:12 INFO [main] s.k.i.k.KVService - Got operation Operation{id=24cc79cd-f64a-260e-30cc-43ccb96b6625, key=test4}! Now implement me please :)
-01/01 00:00:12 INFO [main] s.k.i.k.KVService - Got operation Operation{id=e7817fb2-ad67-1514-4982-c967cdecdb80, key=test5}! Now implement me please :)
-01/01 00:00:12 DEBUG[main] s.s.k.s.c.i.P2pSimulator - sending msg:se.kth.id2203.networking.Message@4bbf6d0e from:/192.168.0.3:45678 to:/192.168.1.1:45678
-01/01 00:00:12 INFO [main] s.k.i.k.KVService - Got operation Operation{id=b681bb5b-fdef-f99a-916f-420cf82212bc, key=test8}! Now implement me please :)
-01/01 00:00:12 INFO [main] s.k.i.k.KVService - Got operation Operation{id=a820db14-7101-5870-5210-b615764b6639, key=test6}! Now implement me please :)
-01/01 00:00:12 DEBUG[main] s.s.k.s.c.i.P2pSimulator - sending msg:se.kth.id2203.networking.Message@30b6ffe0 from:/192.168.0.1:45678 to:/192.168.1.1:45678
-01/01 00:00:12 INFO [main] s.k.i.k.KVService - Got operation Operation{id=90c38917-5a65-28db-601d-021e0c199d9e, key=test9}! Now implement me please :)
-01/01 00:00:12 DEBUG[main] s.s.k.s.c.i.P2pSimulator - sending msg:se.kth.id2203.networking.Message@791d1f8b from:/192.168.0.2:45678 to:/192.168.1.1:45678
-01/01 00:00:12 DEBUG[main] s.s.k.s.c.i.P2pSimulator - sending msg:se.kth.id2203.networking.Message@2415fc55 from:/192.168.0.1:45678 to:/192.168.1.1:45678
-01/01 00:00:12 DEBUG[main] s.s.k.s.c.i.P2pSimulator - sending msg:se.kth.id2203.networking.Message@14f232c4 from:/192.168.0.2:45678 to:/192.168.1.1:45678
-01/01 00:00:12 DEBUG[main] s.s.k.s.c.i.P2pSimulator - sending msg:se.kth.id2203.networking.Message@13bc8645 from:/192.168.0.1:45678 to:/192.168.1.1:45678
-01/01 00:00:12 DEBUG[main] s.s.k.s.c.i.P2pSimulator - sending msg:se.kth.id2203.networking.Message@24c22fe from:/192.168.0.2:45678 to:/192.168.1.1:45678
-01/01 00:00:12 DEBUG[main] s.s.k.s.c.i.P2pSimulator - sending msg:se.kth.id2203.networking.Message@93081b6 from:/192.168.0.1:45678 to:/192.168.1.1:45678
-01/01 00:00:12 TRACE[main] s.s.k.s.c.i.P2pSimulator - delivered network msg:se.kth.id2203.networking.Message@43015c69 from:/192.168.0.1:45678 to:/192.168.1.1:45678
-01/01 00:00:12 TRACE[main] s.s.k.s.c.i.P2pSimulator - delivered network msg:se.kth.id2203.networking.Message@19b89d4 from:/192.168.0.2:45678 to:/192.168.1.1:45678
-01/01 00:00:12 TRACE[main] s.s.k.s.c.i.P2pSimulator - delivered network msg:se.kth.id2203.networking.Message@4bbf6d0e from:/192.168.0.3:45678 to:/192.168.1.1:45678
-01/01 00:00:12 TRACE[main] s.s.k.s.c.i.P2pSimulator - delivered network msg:se.kth.id2203.networking.Message@30b6ffe0 from:/192.168.0.1:45678 to:/192.168.1.1:45678
-01/01 00:00:12 TRACE[main] s.s.k.s.c.i.P2pSimulator - delivered network msg:se.kth.id2203.networking.Message@791d1f8b from:/192.168.0.2:45678 to:/192.168.1.1:45678
-01/01 00:00:12 TRACE[main] s.s.k.s.c.i.P2pSimulator - delivered network msg:se.kth.id2203.networking.Message@2415fc55 from:/192.168.0.1:45678 to:/192.168.1.1:45678
-01/01 00:00:12 TRACE[main] s.s.k.s.c.i.P2pSimulator - delivered network msg:se.kth.id2203.networking.Message@14f232c4 from:/192.168.0.2:45678 to:/192.168.1.1:45678
-01/01 00:00:12 TRACE[main] s.s.k.s.c.i.P2pSimulator - delivered network msg:se.kth.id2203.networking.Message@13bc8645 from:/192.168.0.1:45678 to:/192.168.1.1:45678
-01/01 00:00:12 TRACE[main] s.s.k.s.c.i.P2pSimulator - delivered network msg:se.kth.id2203.networking.Message@24c22fe from:/192.168.0.2:45678 to:/192.168.1.1:45678
-01/01 00:00:12 TRACE[main] s.s.k.s.c.i.P2pSimulator - delivered network msg:se.kth.id2203.networking.Message@93081b6 from:/192.168.0.1:45678 to:/192.168.1.1:45678
-01/01 00:00:12 DEBUG[main] s.k.i.s.ScenarioClient - Got OpResponse: OpResponse{id=652c49da-f201-5be7-c49d-0a5603a4fe56, status=OK}
-01/01 00:00:12 DEBUG[main] s.k.i.s.ScenarioClient - Got OpResponse: OpResponse{id=064c72ea-c93a-13e5-ee10-94a9fe542dba, status=OK}
-01/01 00:00:12 DEBUG[main] s.k.i.s.ScenarioClient - Got OpResponse: OpResponse{id=189c6082-da52-e6b2-78b3-6bea80783fbb, status=OK}
-01/01 00:00:12 DEBUG[main] s.k.i.s.ScenarioClient - Got OpResponse: OpResponse{id=9e568642-64ea-8630-9c95-2496da920844, status=OK}
-01/01 00:00:12 DEBUG[main] s.k.i.s.ScenarioClient - Got OpResponse: OpResponse{id=50f8fd89-e213-217d-7a93-6a022b9839e4, status=OK}
-01/01 00:00:12 DEBUG[main] s.k.i.s.ScenarioClient - Got OpResponse: OpResponse{id=24cc79cd-f64a-260e-30cc-43ccb96b6625, status=OK}
-01/01 00:00:12 DEBUG[main] s.k.i.s.ScenarioClient - Got OpResponse: OpResponse{id=e7817fb2-ad67-1514-4982-c967cdecdb80, status=OK}
-01/01 00:00:12 DEBUG[main] s.k.i.s.ScenarioClient - Got OpResponse: OpResponse{id=b681bb5b-fdef-f99a-916f-420cf82212bc, status=OK}
-01/01 00:00:12 DEBUG[main] s.k.i.s.ScenarioClient - Got OpResponse: OpResponse{id=a820db14-7101-5870-5210-b615764b6639, status=OK}
-01/01 00:00:12 DEBUG[main] s.k.i.s.ScenarioClient - Got OpResponse: OpResponse{id=90c38917-5a65-28db-601d-021e0c199d9e, status=OK}
-01/01 00:00:16 DEBUG[main] s.s.k.s.c.i.P2pSimulator - triggered [periodic] timeout:se.kth.id2203.bootstrapping.BSTimeout&lt;40bcf2e6-a009-97a4-4931-0e6c6929f09b&gt;
-01/01 00:00:16 DEBUG[main] s.s.k.s.c.i.P2pSimulator - cancelPeriodicTimeout: 40bcf2e6-a009-97a4-4931-0e6c6929f09b. APT=[40bcf2e6-a009-97a4-4931-0e6c6929f09b]
 01/01 00:01:52 INFO [main] s.s.k.s.c.i.P2pSimulator - simulation terminated
 01/01 00:01:52 INFO [main] s.s.k.s.c.i.P2pSimulator - ========================================================
 01/01 00:01:52 INFO [main] s.s.k.s.c.i.P2pSimulator - Simulated time: 1m 52s
-01/01 00:01:52 INFO [main] s.s.k.s.c.i.P2pSimulator - Real time: 0.436s
-01/01 00:01:52 INFO [main] s.s.k.s.c.i.P2pSimulator - Time compression factor:256.8807339449541
+01/01 00:01:52 INFO [main] s.s.k.s.c.i.P2pSimulator - Real time: 0.457s
+01/01 00:01:52 INFO [main] s.s.k.s.c.i.P2pSimulator - Time compression factor:245.0765864332604
 01/01 00:01:52 INFO [main] s.s.k.s.c.i.P2pSimulator - ========================================================
-01/01 00:01:52 INFO [main] s.s.k.s.c.i.SimulatorMngrComp - terminating simulation...
+01/01 00:01:52 INFO [Thread-0] Kompics - finished quitting Kompics.
 </system-out>
     <system-err>Caught an exception: java.io.FileNotFoundException: /Users/Klas/Library/Mobile%20Documents/com~apple~CloudDocs/KTH/dsac/project/id2203-project/common/target/project17-common-1.0-SNAPSHOT.jar (No such file or directory)
 Caught an exception: java.io.FileNotFoundException: /Users/Klas/Library/Mobile%20Documents/com~apple~CloudDocs/KTH/dsac/project/id2203-project/common/target/project17-common-1.0-SNAPSHOT.jar (No such file or directory)
@@ -315,6 +232,69 @@ Caught an exception: java.io.FileNotFoundException: /Users/Klas/Library/Mobile%2
 Caught an exception: java.io.FileNotFoundException: /Users/Klas/Library/Mobile%20Documents/com~apple~CloudDocs/KTH/dsac/project/id2203-project/common/target/project17-common-1.0-SNAPSHOT.jar (No such file or directory)
 Caught an exception: java.io.FileNotFoundException: /Users/Klas/Library/Mobile%20Documents/com~apple~CloudDocs/KTH/dsac/project/id2203-project/common/target/project17-common-1.0-SNAPSHOT.jar (No such file or directory)
 Caught an exception: java.io.FileNotFoundException: /Users/Klas/Library/Mobile%20Documents/com~apple~CloudDocs/KTH/dsac/project/id2203-project/common/target/project17-common-1.0-SNAPSHOT.jar (No such file or directory)
+Caught an exception: java.io.FileNotFoundException: /Users/Klas/Library/Mobile%20Documents/com~apple~CloudDocs/KTH/dsac/project/id2203-project/common/target/project17-common-1.0-SNAPSHOT.jar (No such file or directory)
+Caught an exception: java.io.FileNotFoundException: /Users/Klas/Library/Mobile%20Documents/com~apple~CloudDocs/KTH/dsac/project/id2203-project/common/target/project17-common-1.0-SNAPSHOT.jar (No such file or directory)
+Fault in Kompics component escalated to root:
+KompicsFault(java.lang.RuntimeException: se.kth.id2203.kvstore.KVService@5c86a017 has no negative se.kth.id2203.overlay.Routing thrown in Component(98f8ba3d-c812-a76d-554d-cd2b40b5f04b):se.sics.kompics.simulator.core.impl.SimulatorMngrComp@2e385cce while handling event StartNode&lt;/192.168.0.1:45678&gt;)
+java.lang.RuntimeException: se.kth.id2203.kvstore.KVService@5c86a017 has no negative se.kth.id2203.overlay.Routing
+	at se.sics.kompics.JavaComponent.getNegative(JavaComponent.java:110)
+	at se.kth.id2203.ParentComponent.&lt;init&gt;(ParentComponent.java:48)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at java.lang.Class.newInstance(Class.java:442)
+	at se.sics.kompics.JavaComponent.createInstance(JavaComponent.java:255)
+	at se.sics.kompics.JavaComponent.doCreate(JavaComponent.java:226)
+	at se.sics.kompics.ComponentDefinition.create(ComponentDefinition.java:236)
+	at se.sics.kompics.simulator.core.impl.SimulatorMngrComp.access$400(SimulatorMngrComp.java:59)
+	at se.sics.kompics.simulator.core.impl.SimulatorMngrComp$4.handle(SimulatorMngrComp.java:150)
+	at se.sics.kompics.simulator.core.impl.SimulatorMngrComp$4.handle(SimulatorMngrComp.java:133)
+	at se.sics.kompics.JavaComponent.executeEvent(JavaComponent.java:389)
+	at se.sics.kompics.JavaComponent.execute(JavaComponent.java:333)
+	at se.sics.kompics.Scheduler.executeComponent(Scheduler.java:15)
+	at se.sics.kompics.simulator.scheduler.BasicSimulationScheduler.proceed(BasicSimulationScheduler.java:55)
+	at se.sics.kompics.Kompics.createAndStart(Kompics.java:229)
+	at se.sics.kompics.Kompics.createAndStart(Kompics.java:156)
+	at se.sics.kompics.simulator.run.LauncherComp.main(LauncherComp.java:57)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at javassist.Loader.run(Loader.java:288)
+	at se.sics.kompics.simulator.SimulationScenario.simulate(SimulationScenario.java:359)
+	at se.sics.kompics.simulator.SimulationScenario.simulate(SimulationScenario.java:333)
+	at se.kth.id2203.simulation.OpsTest.simpleOpsTest(OpsTest.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:73)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:46)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:180)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:41)
+	at org.junit.runners.ParentRunner$1.evaluate(ParentRunner.java:173)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:220)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 </system-err>
   </testcase>
 </testsuite>

@@ -1,6 +1,10 @@
 /Users/Klas/Library/Mobile Documents/com~apple~CloudDocs/KTH/dsac/project/id2203-project/server/src/main/java/se/kth/id2203/bootstrapping/Boot.java
 /Users/Klas/Library/Mobile Documents/com~apple~CloudDocs/KTH/dsac/project/id2203-project/server/src/main/java/se/kth/id2203/Main.java
+/Users/Klas/Library/Mobile Documents/com~apple~CloudDocs/KTH/dsac/project/id2203-project/server/src/main/java/se/kth/id2203/beb/BEBDeliver.java
+/Users/Klas/Library/Mobile Documents/com~apple~CloudDocs/KTH/dsac/project/id2203-project/server/src/main/java/se/kth/id2203/beb/BEBPort.java
 /Users/Klas/Library/Mobile Documents/com~apple~CloudDocs/KTH/dsac/project/id2203-project/server/src/main/java/se/kth/id2203/bootstrapping/Bootstrapping.java
+/Users/Klas/Library/Mobile Documents/com~apple~CloudDocs/KTH/dsac/project/id2203-project/server/src/main/java/se/kth/id2203/beb/BEB.java
+/Users/Klas/Library/Mobile Documents/com~apple~CloudDocs/KTH/dsac/project/id2203-project/server/src/main/java/se/kth/id2203/elect/Elect.java
 /Users/Klas/Library/Mobile Documents/com~apple~CloudDocs/KTH/dsac/project/id2203-project/server/src/main/java/se/kth/id2203/bootstrapping/GetInitialAssignments.java
 /Users/Klas/Library/Mobile Documents/com~apple~CloudDocs/KTH/dsac/project/id2203-project/server/src/main/java/se/kth/id2203/bootstrapping/InitialAssignments.java
 /Users/Klas/Library/Mobile Documents/com~apple~CloudDocs/KTH/dsac/project/id2203-project/server/src/main/java/se/kth/id2203/bootstrapping/BootstrapClient.java
@@ -8,6 +12,8 @@
 /Users/Klas/Library/Mobile Documents/com~apple~CloudDocs/KTH/dsac/project/id2203-project/server/src/main/java/se/kth/id2203/overlay/Routing.java
 /Users/Klas/Library/Mobile Documents/com~apple~CloudDocs/KTH/dsac/project/id2203-project/server/src/main/java/se/kth/id2203/bootstrapping/BootstrapServer.java
 /Users/Klas/Library/Mobile Documents/com~apple~CloudDocs/KTH/dsac/project/id2203-project/server/src/main/java/se/kth/id2203/bootstrapping/Ready.java
+/Users/Klas/Library/Mobile Documents/com~apple~CloudDocs/KTH/dsac/project/id2203-project/server/src/main/java/se/kth/id2203/beb/BEBMessage.java
+/Users/Klas/Library/Mobile Documents/com~apple~CloudDocs/KTH/dsac/project/id2203-project/server/src/main/java/se/kth/id2203/beb/BEBRequest.java
 /Users/Klas/Library/Mobile Documents/com~apple~CloudDocs/KTH/dsac/project/id2203-project/server/src/main/java/se/kth/id2203/HostComponent.java
 /Users/Klas/Library/Mobile Documents/com~apple~CloudDocs/KTH/dsac/project/id2203-project/server/src/main/java/se/kth/id2203/overlay/LookupTable.java
 /Users/Klas/Library/Mobile Documents/com~apple~CloudDocs/KTH/dsac/project/id2203-project/server/src/main/java/se/kth/id2203/kvstore/KVService.java

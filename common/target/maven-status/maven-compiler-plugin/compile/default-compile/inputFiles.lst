@@ -1,7 +1,10 @@
 /Users/Klas/Library/Mobile Documents/com~apple~CloudDocs/KTH/dsac/project/id2203-project/common/src/main/java/se/kth/id2203/overlay/Connect.java
 /Users/Klas/Library/Mobile Documents/com~apple~CloudDocs/KTH/dsac/project/id2203-project/common/src/main/java/se/kth/id2203/networking/NetAddress.java
+/Users/Klas/Library/Mobile Documents/com~apple~CloudDocs/KTH/dsac/project/id2203-project/common/src/main/java/se/kth/id2203/kvstore/OperationCAS.java
+/Users/Klas/Library/Mobile Documents/com~apple~CloudDocs/KTH/dsac/project/id2203-project/common/src/main/java/se/kth/id2203/kvstore/OperationGET.java
 /Users/Klas/Library/Mobile Documents/com~apple~CloudDocs/KTH/dsac/project/id2203-project/common/src/main/java/se/kth/id2203/overlay/RouteMsg.java
 /Users/Klas/Library/Mobile Documents/com~apple~CloudDocs/KTH/dsac/project/id2203-project/common/src/main/java/se/kth/id2203/kvstore/Operation.java
+/Users/Klas/Library/Mobile Documents/com~apple~CloudDocs/KTH/dsac/project/id2203-project/common/src/main/java/se/kth/id2203/kvstore/OperationPUT.java
 /Users/Klas/Library/Mobile Documents/com~apple~CloudDocs/KTH/dsac/project/id2203-project/common/src/main/java/se/kth/id2203/networking/NetAddressConverter.java
 /Users/Klas/Library/Mobile Documents/com~apple~CloudDocs/KTH/dsac/project/id2203-project/common/src/main/java/se/kth/id2203/networking/Message.java
 /Users/Klas/Library/Mobile Documents/com~apple~CloudDocs/KTH/dsac/project/id2203-project/common/src/main/java/se/kth/id2203/networking/NetHeader.java

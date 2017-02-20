@@ -1,3 +1,4 @@
+se/kth/id2203/kvstore/Console$5.class
 se/kth/id2203/kvstore/ClientService$ConnectTimeout.class
 se/kth/id2203/kvstore/ClientService$OpWithFuture.class
 se/kth/id2203/client/Main.class
@@ -13,4 +14,5 @@ se/kth/id2203/kvstore/Console$2.class
 se/kth/id2203/kvstore/ClientService$3.class
 se/kth/id2203/kvstore/Console$Command.class
 se/kth/id2203/kvstore/Console$3.class
+se/kth/id2203/kvstore/Console$4.class
 se/kth/id2203/kvstore/ClientService$4.class

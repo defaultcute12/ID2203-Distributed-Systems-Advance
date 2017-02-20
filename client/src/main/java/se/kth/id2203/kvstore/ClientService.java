@@ -133,8 +133,20 @@ public class ClientService extends ComponentDefinition {
         subscribe(responseHandler, net);
     }
 
-    Future<OpResponse> op(String key) {
-        Operation op = new Operation(key);
+    Future<OpResponse> get(String key) {
+        OperationGET op = new OperationGET(key);
+        OpWithFuture owf = new OpWithFuture(op);
+        trigger(owf, onSelf);
+        return owf.f;
+    }
+    Future<OpResponse> put(String key, String value) {
+        OperationPUT op = new OperationPUT(key, value);
+        OpWithFuture owf = new OpWithFuture(op);
+        trigger(owf, onSelf);
+        return owf.f;
+    }
+    Future<OpResponse> cas(String key, String refValue, String newValue) {
+        OperationCAS op = new OperationCAS(key, refValue, newValue);
         OpWithFuture owf = new OpWithFuture(op);
         trigger(owf, onSelf);
         return owf.f;

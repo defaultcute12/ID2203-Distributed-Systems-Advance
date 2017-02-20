@@ -1,4 +1,4 @@
-package se.kth.id2203.overlay;
+package se.kth.id2203.elect;
 
 import se.kth.id2203.networking.NetAddress;
 import se.sics.kompics.KompicsEvent;

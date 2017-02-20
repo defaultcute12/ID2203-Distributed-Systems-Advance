@@ -36,17 +36,11 @@ public class Operation implements KompicsEvent, Serializable {
 
     private static final long serialVersionUID = 2525600659083087179L;
 
-//    public static enum Type {
-//        GET, PUT;
-//    }
-
-    //public final Type type;
     public final String key;
     public final UUID id;
 
     public Operation(String key /*, Type type*/) {
         this.key = key;
-      //  this.type = type;
         this.id = UUID.randomUUID();
     }
 

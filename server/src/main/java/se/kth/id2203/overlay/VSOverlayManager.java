@@ -27,7 +27,15 @@ import com.larskroll.common.J6;
 import java.util.Collection;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import se.kth.id2203.beb.BEBRequest;
+import se.kth.id2203.beb.BEBDeliver;
+import se.kth.id2203.beb.BEBPort;
 import se.kth.id2203.bootstrapping.*;
+import se.kth.id2203.elect.Elect;
+import se.kth.id2203.kvstore.Operation;
+import se.kth.id2203.kvstore.OperationCAS;
+import se.kth.id2203.kvstore.OperationGET;
+import se.kth.id2203.kvstore.OperationPUT;
 import se.kth.id2203.networking.Message;
 import se.kth.id2203.networking.NetAddress;
 import se.sics.kompics.ClassMatchedHandler;
@@ -57,8 +65,10 @@ public class VSOverlayManager extends ComponentDefinition {
     protected final Positive<Bootstrapping> boot = requires(Bootstrapping.class);
     protected final Positive<Network> net = requires(Network.class);
     protected final Positive<Timer> timer = requires(Timer.class);
+    protected final Positive<BEBPort> beb = requires(BEBPort.class);
     //******* Fields ******
     final NetAddress self = config().getValue("id2203.project.address", NetAddress.class);
+    protected NetAddress leader;
     private LookupTable lut = null;
     //******* Handlers ******
     protected final Handler<GetInitialAssignments> initialAssignmentHandler = new Handler<GetInitialAssignments>() {
@@ -87,10 +97,14 @@ public class VSOverlayManager extends ComponentDefinition {
 
         @Override
         public void handle(RouteMsg content, Message context) {
+            BEBDeliver bebDeliver = new BEBDeliver(context.getSource(), content.msg);
             Collection<NetAddress> partition = lut.lookup(content.key);
-            NetAddress target = J6.randomElement(partition);
-            LOG.info("Forwarding message for key {} to {}", content.key, target);
-            trigger(new Message(context.getSource(), target, content.msg), net);
+            BEBRequest BEBRequest = new BEBRequest(bebDeliver, partition);
+            trigger(BEBRequest, beb);
+
+           // NetAddress target = J6.randomElement(partition);
+           // LOG.info("Forwarding message for key {} to {}", content.key, target);
+           // trigger(new Message(context.getSource(), target, content.msg), net);
         }
     };
     protected final Handler<RouteMsg> localRouteHandler = new Handler<RouteMsg>() {
@@ -116,6 +130,21 @@ public class VSOverlayManager extends ComponentDefinition {
             }
         }
     };
+
+    protected final Handler<BEBDeliver> deliverHandler = new Handler<BEBDeliver>() {
+        @Override
+        public void handle(BEBDeliver bebDeliver) {
+            Object data = bebDeliver.getData();
+            if(data instanceof OperationGET
+            || data instanceof OperationPUT
+            || data instanceof OperationCAS) {
+                Operation op = (Operation) data;
+                trigger(new Message(bebDeliver.getSource(), self, op), net);
+            }
+        }
+    };
+
+
     protected final Handler<Elect> electHandler = new Handler<Elect>() {
 
         @Override
@@ -137,5 +166,6 @@ public class VSOverlayManager extends ComponentDefinition {
         subscribe(localRouteHandler, route);
         subscribe(connectHandler, net);
         subscribe(electHandler, boot);
+        subscribe(deliverHandler, beb);
     }
 }

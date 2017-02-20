@@ -7,14 +7,14 @@ import se.kth.id2203.networking.NetAddress;
 import se.sics.kompics.KompicsEvent;
 
 
-public class BebDeliver implements KompicsEvent {
+public class BEBDeliver implements KompicsEvent {
 
     private static final long serialVersionUID = 4088333329204792579L;
 
     private NetAddress source;
     private Object data;
 
-    public BebDeliver(NetAddress source, Object data) {
+    public BEBDeliver(NetAddress source, Object data) {
         this.source = source;
         this.data = data;
     }

@@ -68,12 +68,73 @@ public class Console implements Runnable {
             @Override
             public boolean execute(String[] cmdline, ClientService worker) {
                 if (cmdline.length == 2) {
-                    Future<OpResponse> fr = worker.op(cmdline[1]);
-                    out.println("Operation sent! Awaiting response...");
+                    Future<OpResponse> fr = worker.get(cmdline[1]);
+                    out.println("GET Operation sent! Awaiting response...");
                     try {
                         OpResponse r = fr.get();
-                        out.println("Response: " + r);
-                        out.println("Operation complete! Status was: " + r.status + " and response " + r.response);
+                        out.println("GET Operation complete! Status was: " + r.status + " and response " + r.response);
+                        return true;
+                    } catch (InterruptedException | ExecutionException ex) {
+                        ex.printStackTrace(out);
+                        return false;
+                    }
+
+                } else {
+                    return false;
+                }
+            }
+
+            @Override
+            public String usage() {
+                return "op <key>";
+            }
+
+            @Override
+            public String help() {
+                return "Just a test operation...replace with proper put get";
+            }
+        });
+        commands.put("put", new Command() {
+
+            @Override
+            public boolean execute(String[] cmdline, ClientService worker) {
+                if (cmdline.length == 3) {
+                    Future<OpResponse> fr = worker.put(cmdline[1], cmdline[2]);
+                    out.println("PUT Operation sent! Awaiting response...");
+                    try {
+                        OpResponse r = fr.get();
+                        out.println("PUT Operation complete! Status was: " + r.status + " and response " + r.response);
+                        return true;
+                    } catch (InterruptedException | ExecutionException ex) {
+                        ex.printStackTrace(out);
+                        return false;
+                    }
+
+                } else {
+                    return false;
+                }
+            }
+
+            @Override
+            public String usage() {
+                return "op <key>";
+            }
+
+            @Override
+            public String help() {
+                return "Just a test operation...replace with proper put get";
+            }
+        });
+        commands.put("cas", new Command() {
+
+            @Override
+            public boolean execute(String[] cmdline, ClientService worker) {
+                if (cmdline.length == 4) {
+                    Future<OpResponse> fr = worker.cas(cmdline[1], cmdline[2], cmdline[3]);
+                    out.println("CAS Operation sent! Awaiting response...");
+                    try {
+                        OpResponse r = fr.get();
+                        out.println("CAS Operation complete! Status was: " + r.status + " and response " + r.response);
                         return true;
                     } catch (InterruptedException | ExecutionException ex) {
                         ex.printStackTrace(out);

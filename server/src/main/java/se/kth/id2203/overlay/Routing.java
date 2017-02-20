@@ -30,7 +30,6 @@ import se.sics.kompics.PortType;
  * @author Lars Kroll <lkroll@kth.se>
  */
 public class Routing extends PortType {
-
     {
         request(RouteMsg.class);
     }

@@ -10,18 +10,17 @@ import se.sics.kompics.network.Transport;
 
 import java.io.Serializable;
 
-public class BebDataMessage extends NetMessage implements Serializable {
+public class BEBMessage extends NetMessage implements Serializable {
 
     private NetAddress source;
-    private BebDeliver data;
+    private BEBDeliver data;
 
-    public BebDataMessage(NetAddress source, NetAddress destination, BebDeliver data) {
+    public BEBMessage(NetAddress source, NetAddress destination, BEBDeliver data) {
         super(source, destination, Transport.TCP);
-        this.source = source;
         this.data = data;
     }
 
-    public BebDeliver getData() {
+    public BEBDeliver getData() {
         return data;
     }
 }
