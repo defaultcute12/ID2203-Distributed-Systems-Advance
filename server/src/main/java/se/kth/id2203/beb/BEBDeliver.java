@@ -6,11 +6,12 @@ package se.kth.id2203.beb;
 import se.kth.id2203.networking.NetAddress;
 import se.sics.kompics.KompicsEvent;
 
+import java.io.Serializable;
 
-public class BEBDeliver implements KompicsEvent {
+
+public class BEBDeliver implements KompicsEvent, Serializable {
 
     private static final long serialVersionUID = 4088333329204792579L;
-
     private NetAddress source;
     private Object data;
 

@@ -1,3 +1,4 @@
+
 package se.kth.id2203;
 
 import com.google.common.base.Optional;
@@ -30,7 +31,6 @@ public class ParentComponent extends ComponentDefinition {
     protected final Component beb = create(BEB.class, Init.NONE);
     protected final Component boot;
 
-    NetAddress self;
     {
         Optional<NetAddress> serverO = config().readValue("id2203.project.bootstrap-address", NetAddress.class);
         if (serverO.isPresent()) { // start in client mode

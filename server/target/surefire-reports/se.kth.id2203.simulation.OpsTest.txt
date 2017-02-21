@@ -1,9 +1,9 @@
 -------------------------------------------------------------------------------
 Test set: se.kth.id2203.simulation.OpsTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 6.944 sec <<< FAILURE!
-simpleOpsTest(se.kth.id2203.simulation.OpsTest)  Time elapsed: 6.736 sec  <<< FAILURE!
-junit.framework.ComparisonFailure: null expected:<NOT_IMPLEMENTED> but was:<null>
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 2.151 sec <<< FAILURE!
+simpleOpsTest(se.kth.id2203.simulation.OpsTest)  Time elapsed: 2.088 sec  <<< FAILURE!
+junit.framework.ComparisonFailure: null expected:<[NOT_IMPLEMENTED]> but was:<[SENT]>
 	at junit.framework.Assert.assertEquals(Assert.java:81)
 	at junit.framework.Assert.assertEquals(Assert.java:87)
 	at se.kth.id2203.simulation.OpsTest.simpleOpsTest(OpsTest.java:48)

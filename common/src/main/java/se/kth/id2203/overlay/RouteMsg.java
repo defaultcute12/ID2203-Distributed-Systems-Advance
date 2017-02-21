@@ -41,5 +41,4 @@ public class RouteMsg implements KompicsEvent, Serializable {
         this.key = key;
         this.msg = msg;
     }
-
 }

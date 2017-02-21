@@ -2,57 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64bbac2c-3d9c-4353-82a6-213a462dd2e8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/src/main/java/se/kth/id2203/kvstore/OperationCAS.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/src/main/java/se/kth/id2203/kvstore/OperationGET.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/src/main/java/se/kth/id2203/kvstore/OperationPUT.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/server/target/classes/se/kth/id2203/overlay/Elect.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/beb/BebBroadcastRequest.java" afterPath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/beb/BEBRequest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/beb/BebDataMessage.java" afterPath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/beb/BEBMessage.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/beb/BebDeliver.java" afterPath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/beb/BEBDeliver.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/beb/BestEffortBroadcast.java" afterPath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/beb/BEB.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/beb/BestEffortBroadcastPort.java" afterPath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/beb/BEBPort.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/overlay/Elect.java" afterPath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/elect/Elect.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/target/classes/se/kth/id2203/kvstore/ClientService$ConnectTimeout.class" afterPath="$PROJECT_DIR$/client/target/classes/se/kth/id2203/kvstore/ClientService$ConnectTimeout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/target/classes/se/kth/id2203/kvstore/ClientService$OpWithFuture.class" afterPath="$PROJECT_DIR$/client/target/classes/se/kth/id2203/kvstore/ClientService$OpWithFuture.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/target/classes/se/kth/id2203/kvstore/ClientService.class" afterPath="$PROJECT_DIR$/client/target/classes/se/kth/id2203/kvstore/ClientService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/target/classes/se/kth/id2203/kvstore/Console$1.class" afterPath="$PROJECT_DIR$/client/target/classes/se/kth/id2203/kvstore/Console$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/target/classes/se/kth/id2203/kvstore/Console$2.class" afterPath="$PROJECT_DIR$/client/target/classes/se/kth/id2203/kvstore/Console$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/target/classes/se/kth/id2203/kvstore/Console$3.class" afterPath="$PROJECT_DIR$/client/target/classes/se/kth/id2203/kvstore/Console$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/target/classes/se/kth/id2203/kvstore/Console$Command.class" afterPath="$PROJECT_DIR$/client/target/classes/se/kth/id2203/kvstore/Console$Command.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/target/classes/se/kth/id2203/kvstore/Console.class" afterPath="$PROJECT_DIR$/client/target/classes/se/kth/id2203/kvstore/Console.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/elect/LeaderElection.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/target/project17-client-1.0-SNAPSHOT-shaded.jar" afterPath="$PROJECT_DIR$/client/target/project17-client-1.0-SNAPSHOT-shaded.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/target/project17-client-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/client/target/project17-client-1.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/target/classes/se/kth/id2203/kvstore/Operation.class" afterPath="$PROJECT_DIR$/common/target/classes/se/kth/id2203/kvstore/Operation.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/target/project17-common-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/common/target/project17-common-1.0-SNAPSHOT.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/target/classes/se/kth/id2203/ParentComponent.class" afterPath="$PROJECT_DIR$/server/target/classes/se/kth/id2203/ParentComponent.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/target/classes/se/kth/id2203/bootstrapping/BootstrapServer$2.class" afterPath="$PROJECT_DIR$/server/target/classes/se/kth/id2203/bootstrapping/BootstrapServer$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/target/classes/se/kth/id2203/bootstrapping/Bootstrapping.class" afterPath="$PROJECT_DIR$/server/target/classes/se/kth/id2203/bootstrapping/Bootstrapping.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/target/classes/se/kth/id2203/beb/BEBDeliver.class" afterPath="$PROJECT_DIR$/server/target/classes/se/kth/id2203/beb/BEBDeliver.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/target/classes/se/kth/id2203/beb/BEBMessage.class" afterPath="$PROJECT_DIR$/server/target/classes/se/kth/id2203/beb/BEBMessage.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/target/classes/se/kth/id2203/kvstore/KVService$1.class" afterPath="$PROJECT_DIR$/server/target/classes/se/kth/id2203/kvstore/KVService$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/target/classes/se/kth/id2203/kvstore/KVService$2.class" afterPath="$PROJECT_DIR$/server/target/classes/se/kth/id2203/kvstore/KVService$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/target/classes/se/kth/id2203/kvstore/KVService$3.class" afterPath="$PROJECT_DIR$/server/target/classes/se/kth/id2203/kvstore/KVService$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/target/classes/se/kth/id2203/kvstore/KVService$4.class" afterPath="$PROJECT_DIR$/server/target/classes/se/kth/id2203/kvstore/KVService$4.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/target/classes/se/kth/id2203/kvstore/KVService.class" afterPath="$PROJECT_DIR$/server/target/classes/se/kth/id2203/kvstore/KVService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/target/classes/se/kth/id2203/overlay/Routing.class" afterPath="$PROJECT_DIR$/server/target/classes/se/kth/id2203/overlay/Routing.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/target/classes/se/kth/id2203/overlay/VSOverlayManager$1.class" afterPath="$PROJECT_DIR$/server/target/classes/se/kth/id2203/overlay/VSOverlayManager$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/target/classes/se/kth/id2203/overlay/VSOverlayManager$2.class" afterPath="$PROJECT_DIR$/server/target/classes/se/kth/id2203/overlay/VSOverlayManager$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/target/classes/se/kth/id2203/overlay/VSOverlayManager$3.class" afterPath="$PROJECT_DIR$/server/target/classes/se/kth/id2203/overlay/VSOverlayManager$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/target/classes/se/kth/id2203/overlay/VSOverlayManager$4.class" afterPath="$PROJECT_DIR$/server/target/classes/se/kth/id2203/overlay/VSOverlayManager$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/target/classes/se/kth/id2203/overlay/VSOverlayManager$5.class" afterPath="$PROJECT_DIR$/server/target/classes/se/kth/id2203/overlay/VSOverlayManager$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/target/classes/se/kth/id2203/overlay/VSOverlayManager$6.class" afterPath="$PROJECT_DIR$/server/target/classes/se/kth/id2203/overlay/VSOverlayManager$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/target/classes/se/kth/id2203/overlay/VSOverlayManager.class" afterPath="$PROJECT_DIR$/server/target/classes/se/kth/id2203/overlay/VSOverlayManager.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/main/java/se/kth/id2203/kvstore/ClientService.java" afterPath="$PROJECT_DIR$/client/src/main/java/se/kth/id2203/kvstore/ClientService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/main/java/se/kth/id2203/kvstore/Console.java" afterPath="$PROJECT_DIR$/client/src/main/java/se/kth/id2203/kvstore/Console.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/client/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/client/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/src/main/java/se/kth/id2203/kvstore/Operation.java" afterPath="$PROJECT_DIR$/common/src/main/java/se/kth/id2203/kvstore/Operation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/src/main/java/se/kth/id2203/overlay/RouteMsg.java" afterPath="$PROJECT_DIR$/common/src/main/java/se/kth/id2203/overlay/RouteMsg.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/common/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/ParentComponent.java" afterPath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/ParentComponent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/bootstrapping/BootstrapServer.java" afterPath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/bootstrapping/BootstrapServer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/bootstrapping/Bootstrapping.java" afterPath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/bootstrapping/Bootstrapping.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/beb/BEBDeliver.java" afterPath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/beb/BEBDeliver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/beb/BEBMessage.java" afterPath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/beb/BEBMessage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/kvstore/KVService.java" afterPath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/kvstore/KVService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/overlay/Routing.java" afterPath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/overlay/Routing.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/overlay/VSOverlayManager.java" afterPath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/overlay/VSOverlayManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/target/surefire-reports/TEST-se.kth.id2203.simulation.OpsTest.xml" afterPath="$PROJECT_DIR$/server/target/surefire-reports/TEST-se.kth.id2203.simulation.OpsTest.xml" />
@@ -76,78 +45,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ParentComponent.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/src/main/java/se/kth/id2203/ParentComponent.java">
+      <file leaf-file-name="BEBMessage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/src/main/java/se/kth/id2203/beb/BEBMessage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="44" column="46" lean-forward="false" selection-start-line="44" selection-start-column="46" selection-end-line="44" selection-end-column="46" />
+            <state relative-caret-position="156">
+              <caret line="17" column="18" lean-forward="true" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KVService.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/server/src/main/java/se/kth/id2203/kvstore/KVService.java">
+      <file leaf-file-name="NetMessage.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/common/target/project17-common-1.0-SNAPSHOT.jar!/se/kth/id2203/networking/NetMessage.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="84" column="107" lean-forward="false" selection-start-line="84" selection-start-column="107" selection-end-line="84" selection-end-column="107" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OperationCAS.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/src/main/java/se/kth/id2203/kvstore/OperationCAS.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="46" lean-forward="false" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HashMap.java" pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/src.zip!/java/util/HashMap.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="609" column="13" lean-forward="false" selection-start-line="609" selection-start-column="13" selection-end-line="609" selection-end-column="13" />
-              <folding>
-                <element signature="e#24298#24299#0" expanded="true" />
-                <element signature="e#24363#24364#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Elect.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/src/main/java/se/kth/id2203/elect/Elect.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LookupTable.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/src/main/java/se/kth/id2203/overlay/LookupTable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="54" column="9" lean-forward="false" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Routing.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/src/main/java/se/kth/id2203/overlay/Routing.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="35" column="1" lean-forward="false" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
+            <state relative-caret-position="90">
+              <caret line="14" column="47" lean-forward="true" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -156,8 +68,8 @@
       <file leaf-file-name="BEBDeliver.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/src/main/java/se/kth/id2203/beb/BEBDeliver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="25" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+            <state relative-caret-position="112">
+              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -165,21 +77,74 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VSOverlayManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/src/main/java/se/kth/id2203/overlay/VSOverlayManager.java">
+      <file leaf-file-name="OpsTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/src/test/java/se/kth/id2203/simulation/OpsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="157" column="13" lean-forward="false" selection-start-line="157" selection-start-column="13" selection-end-line="157" selection-end-column="13" />
+            <state relative-caret-position="180">
+              <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Console.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/main/java/se/kth/id2203/kvstore/Console.java">
+      <file leaf-file-name="BEB.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/src/main/java/se/kth/id2203/beb/BEB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="58" column="23" lean-forward="false" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="23" />
+            <state relative-caret-position="150">
+              <caret line="13" column="51" lean-forward="true" selection-start-line="13" selection-start-column="51" selection-end-line="13" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BootstrapServer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/src/main/java/se/kth/id2203/bootstrapping/BootstrapServer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="341">
+              <caret line="86" column="39" lean-forward="true" selection-start-line="86" selection-start-column="39" selection-end-line="86" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BootstrapClient.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/src/main/java/se/kth/id2203/bootstrapping/BootstrapClient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="57" column="98" lean-forward="false" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="98" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LookupTable.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/server/src/main/java/se/kth/id2203/overlay/LookupTable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="58" column="44" lean-forward="true" selection-start-line="58" selection-start-column="44" selection-end-line="58" selection-end-column="44" />
+              <folding>
+                <element signature="e#2268#2269#0" expanded="true" />
+                <element signature="e#2310#2311#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BEBPort.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/src/main/java/se/kth/id2203/beb/BEBPort.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="1" lean-forward="false" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ObjectOutputStream.java" pinned="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/src.zip!/java/io/ObjectOutputStream.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="127">
+              <caret line="1183" column="0" lean-forward="false" selection-start-line="1183" selection-start-column="0" selection-end-line="1183" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -245,8 +210,6 @@
         <option value="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/Main.java" />
         <option value="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/bootstrapping/InitialAssignments.java" />
         <option value="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/bootstrapping/NodeAssignment.java" />
-        <option value="$PROJECT_DIR$/common/src/main/java/se/kth/id2203/networking/Message.java" />
-        <option value="$PROJECT_DIR$/common/src/main/java/se/kth/id2203/kvstore/OpResponse.java" />
         <option value="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/bootstrapping/Election.java" />
         <option value="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/bootstrapping/GetInitialAssignments.java" />
         <option value="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/bootstrapping/BSTimeout.java" />
@@ -264,26 +227,32 @@
         <option value="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/epfd/HeartbeatReply.java" />
         <option value="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/beb/BestEffortBroadcastPort.java" />
         <option value="$PROJECT_DIR$/common/src/main/java/se/kth/id2203/kvstore/GETRequest.java" />
-        <option value="$PROJECT_DIR$/common/src/main/java/se/kth/id2203/kvstore/OperationGET.java" />
-        <option value="$PROJECT_DIR$/common/src/main/java/se/kth/id2203/kvstore/Operation.java" />
-        <option value="$PROJECT_DIR$/common/src/main/java/se/kth/id2203/kvstore/OperationPUT.java" />
         <option value="$PROJECT_DIR$/common/src/main/java/se/kth/id2203/kvstore/OpResponseGET.java" />
         <option value="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/beb/BebDeliver.java" />
         <option value="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/beb/BebDataMessage.java" />
         <option value="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/beb/BestEffortBroadcast.java" />
         <option value="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/beb/BebBroadcastRequest.java" />
-        <option value="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/beb/BEBRequest.java" />
-        <option value="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/beb/BEBMessage.java" />
         <option value="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/beb/BEBPort.java" />
         <option value="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/beb/BEB.java" />
-        <option value="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/ParentComponent.java" />
         <option value="$PROJECT_DIR$/client/src/main/java/se/kth/id2203/kvstore/ClientService.java" />
         <option value="$PROJECT_DIR$/client/src/main/java/se/kth/id2203/kvstore/Console.java" />
         <option value="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/overlay/VSOverlayManager.java" />
-        <option value="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/elect/Elect.java" />
         <option value="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/overlay/Routing.java" />
-        <option value="$PROJECT_DIR$/common/src/main/java/se/kth/id2203/kvstore/OperationCAS.java" />
         <option value="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/kvstore/KVService.java" />
+        <option value="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/ParentComponent.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/se/kth/id2203/kvstore/OperationCAS.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/se/kth/id2203/kvstore/OperationGET.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/se/kth/id2203/kvstore/OperationPUT.java" />
+        <option value="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/elect/LeaderElection.java" />
+        <option value="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/elect/Elect.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/se/kth/id2203/kvstore/OpResponse.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/se/kth/id2203/kvstore/Operation.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/se/kth/id2203/networking/Message.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/se/kth/id2203/overlay/Connect.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/se/kth/id2203/overlay/RouteMsg.java" />
+        <option value="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/beb/BEBMessage.java" />
+        <option value="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/beb/BEBRequest.java" />
+        <option value="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/beb/BEBDeliver.java" />
       </list>
     </option>
   </component>
@@ -324,9 +293,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -368,6 +336,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="id2203-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="id2203-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simulation" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -479,7 +481,143 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="overlay" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="id2203-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="id2203-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="id2203" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="kvstore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="id2203-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="id2203-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="id2203" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="elect" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="id2203-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="id2203-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="id2203" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrapping" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="id2203-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="id2203-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="id2203" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="beb" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -779,12 +917,14 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="js.eslint.eslintPackage" value="" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager" selected="Application.Client">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -1074,6 +1214,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="64bbac2c-3d9c-4353-82a6-213a462dd2e8" name="Default" comment="" />
@@ -1096,7 +1239,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="22" width="1436" height="878" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1107,19 +1250,20 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37577257" sideWeight="0.10236769" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.046657383" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23362176" sideWeight="0.8976323" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.8976323" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Floobits" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32880098" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21866295" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23885794" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39925835" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1146,48 +1290,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/se/kth/id2203/bootstrapping/Booted.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="32" column="8" lean-forward="false" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
-          <folding>
-            <element signature="e#1369#1370#0" expanded="false" />
-            <element signature="e#1413#1414#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/se/kth/id2203/overlay/Epfd.java" />
-    <entry file="file://$PROJECT_DIR$/client/src/main/java/util/log4j/ColoredPatternLayout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1078">
-          <caret line="67" column="13" lean-forward="false" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/test/java/se/kth/id2203/simulation/OpsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="25" column="7" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/test/java/se/kth/id2203/simulation/ScenarioClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="47" column="13" lean-forward="false" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/main/java/se/kth/id2203/client/ParentComponent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="44" column="5" lean-forward="false" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/src/main/java/se/kth/id2203/bootstrapping/Boot.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
@@ -1202,66 +1304,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/src/main/java/se/kth/id2203/epfd/HeartbeatReply.java" />
     <entry file="file://$PROJECT_DIR$/common/src/main/java/se/kth/id2203/kvstore/GETRequest.java" />
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/se/kth/id2203/kvstore/OperationPUT.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/se/kth/id2203/kvstore/OperationGET.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="21" lean-forward="false" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#291#292#0" expanded="false" />
-            <element signature="e#317#318#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common/src/main/java/se/kth/id2203/kvstore/OpResponseGET.java" />
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/se/kth/id2203/kvstore/OpResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="40" column="29" lean-forward="false" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/se/kth/id2203/kvstore/Operation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="42" column="23" lean-forward="false" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/common/target/project17-common-1.0-SNAPSHOT.jar!/se/kth/id2203/networking/NetMessage.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="13" column="14" lean-forward="true" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/se/kth/id2203/bootstrapping/BootstrapClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="57" column="98" lean-forward="false" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="98" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/src/main/resources/reference.conf">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="26" lean-forward="false" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1269,7 +1316,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1277,15 +1323,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="30" column="20" lean-forward="false" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/se/kth/id2203/bootstrapping/BootstrapServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="53" column="90" lean-forward="false" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="90" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1293,7 +1330,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5250">
           <caret line="408" column="0" lean-forward="false" selection-start-line="408" selection-start-column="0" selection-end-line="408" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1301,7 +1337,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1309,7 +1344,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="271" column="46" lean-forward="false" selection-start-line="271" selection-start-column="46" selection-end-line="271" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1317,7 +1351,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="28" column="13" lean-forward="false" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1325,112 +1358,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="27" column="17" lean-forward="false" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/se/kth/id2203/overlay/Connect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="33" column="13" lean-forward="false" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/se/kth/id2203/networking/NetMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="44" column="22" lean-forward="false" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1762#1763#0" expanded="false" />
-            <element signature="e#1800#1801#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/se/kth/id2203/networking/NetHeader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="37" column="16" lean-forward="false" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/se/kth/id2203/networking/NetAddressConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="31" column="13" lean-forward="false" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/se/kth/id2203/networking/NetAddress.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="38" column="49" lean-forward="false" selection-start-line="38" selection-start-column="49" selection-end-line="38" selection-end-column="49" />
-          <folding>
-            <element signature="e#1668#1669#0" expanded="false" />
-            <element signature="e#1729#1730#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/se/kth/id2203/networking/Message.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="37" column="37" lean-forward="false" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/se/kth/id2203/beb/BEBRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#522#523#0" expanded="true" />
-            <element signature="e#557#558#0" expanded="true" />
-            <element signature="e#614#615#0" expanded="true" />
-            <element signature="e#642#643#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/se/kth/id2203/beb/BEBMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#564#565#0" expanded="true" />
-            <element signature="e#591#592#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/se/kth/id2203/beb/BEB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="59" column="5" lean-forward="false" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1198#1199#0" expanded="true" />
-            <element signature="e#1253#1254#0" expanded="true" />
-            <element signature="e#1323#1324#0" expanded="true" />
-            <element signature="e#1380#1381#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/se/kth/id2203/beb/BEBPort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="1" lean-forward="false" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1438,31 +1365,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="16" column="42" lean-forward="false" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/se/kth/id2203/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="90" column="39" lean-forward="false" selection-start-line="90" selection-start-column="39" selection-end-line="90" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/se/kth/id2203/overlay/RouteMsg.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/se/kth/id2203/HostComponent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="44" column="84" lean-forward="true" selection-start-line="44" selection-start-column="84" selection-end-line="44" selection-end-column="84" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1479,7 +1381,7 @@
         <state relative-caret-position="-180">
           <caret line="94" column="40" lean-forward="true" selection-start-line="94" selection-start-column="40" selection-end-line="94" selection-end-column="40" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="docComment;class#ClientService#0" expanded="false" />
           </folding>
         </state>
@@ -1493,13 +1395,105 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/se/kth/id2203/beb/BEBDeliver.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/src.zip!/java/lang/Class.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="25" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+        <state relative-caret-position="5580">
+          <caret line="441" column="0" lean-forward="false" selection-start-line="441" selection-start-column="0" selection-end-line="441" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/src.zip!/java/util/HashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8490">
+          <caret line="609" column="13" lean-forward="false" selection-start-line="609" selection-start-column="13" selection-end-line="609" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/common/target/project17-common-1.0-SNAPSHOT.jar!/se/kth/id2203/networking/NetAddress.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/se/kth/id2203/kvstore/OperationGET.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="11" column="45" lean-forward="false" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/se/kth/id2203/kvstore/OperationPUT.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="45" lean-forward="false" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/se/kth/id2203/networking/NetAddressConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="31" column="13" lean-forward="false" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/se/kth/id2203/HostComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="44" column="84" lean-forward="true" selection-start-line="44" selection-start-column="84" selection-end-line="44" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/se/kth/id2203/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="90" column="39" lean-forward="false" selection-start-line="90" selection-start-column="39" selection-end-line="90" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/se/kth/id2203/ParentComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="52" column="5" lean-forward="true" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/5.0.0.Alpha2/netty-all-5.0.0.Alpha2.jar!/io/netty/channel/DefaultChannelHandlerInvoker.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="196" column="38" lean-forward="false" selection-start-line="196" selection-start-column="38" selection-end-line="196" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/se/kth/id2203/elect/Elect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="12" column="44" lean-forward="true" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#408#409#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/se/kth/id2203/elect/LeaderElection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/se/kth/id2203/kvstore/KVService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="53" column="32" lean-forward="true" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1513,64 +1507,219 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/src/main/java/se/kth/id2203/overlay/VSOverlayManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="157" column="13" lean-forward="false" selection-start-line="157" selection-start-column="13" selection-end-line="157" selection-end-column="13" />
+        <state relative-caret-position="300">
+          <caret line="63" column="49" lean-forward="false" selection-start-line="63" selection-start-column="49" selection-end-line="63" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/se/kth/id2203/kvstore/OpResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/se/kth/id2203/kvstore/Operation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="36" column="70" lean-forward="false" selection-start-line="36" selection-start-column="70" selection-end-line="36" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/se/kth/id2203/kvstore/OperationCAS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="11" column="33" lean-forward="true" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/se/kth/id2203/networking/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="37" column="26" lean-forward="false" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/se/kth/id2203/networking/NetAddress.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="38" column="49" lean-forward="false" selection-start-line="38" selection-start-column="49" selection-end-line="38" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#3008#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1777#1778#0" expanded="false" />
+            <element signature="e#1821#1822#0" expanded="false" />
+            <element signature="e#1863#1864#0" expanded="false" />
+            <element signature="e#1904#1905#0" expanded="false" />
+            <element signature="e#1961#1962#0" expanded="false" />
+            <element signature="e#1992#1993#0" expanded="false" />
+            <element signature="e#2054#2055#0" expanded="false" />
+            <element signature="e#2110#2111#0" expanded="false" />
+            <element signature="e#2162#2163#0" expanded="false" />
+            <element signature="e#2199#2200#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/se/kth/id2203/networking/NetHeader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="39" column="9" lean-forward="false" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#1937#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1745#1746#0" expanded="false" />
+            <element signature="e#1771#1772#0" expanded="false" />
+            <element signature="e#1827#1828#0" expanded="false" />
+            <element signature="e#1853#1854#0" expanded="false" />
+            <element signature="e#1905#1906#0" expanded="false" />
+            <element signature="e#1933#1934#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/se/kth/id2203/networking/NetMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="34" column="17" lean-forward="false" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#1990#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1677#1678#0" expanded="false" />
+            <element signature="e#1711#1712#0" expanded="false" />
+            <element signature="e#1856#1857#0" expanded="false" />
+            <element signature="e#1894#1895#0" expanded="false" />
+            <element signature="e#1946#1947#0" expanded="false" />
+            <element signature="e#1986#1987#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/se/kth/id2203/overlay/Connect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="35" column="71" lean-forward="false" selection-start-line="35" selection-start-column="71" selection-end-line="35" selection-end-column="71" />
+          <folding>
+            <element signature="e#0#1978#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1511#1512#0" expanded="false" />
+            <element signature="e#1539#1540#0" expanded="false" />
+            <element signature="e#1578#1579#0" expanded="false" />
+            <element signature="e#1625#1626#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/se/kth/id2203/overlay/RouteMsg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="34" column="4" lean-forward="false" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="71" />
+          <folding>
+            <element signature="e#0#1607#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/se/kth/id2203/beb/BEBRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="5" lean-forward="false" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#522#523#0" expanded="true" />
+            <element signature="e#557#558#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/src.zip!/java/io/ObjectOutputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="1183" column="0" lean-forward="false" selection-start-line="1183" selection-start-column="0" selection-end-line="1183" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/common/target/project17-common-1.0-SNAPSHOT.jar!/se/kth/id2203/networking/NetMessage.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="14" column="47" lean-forward="true" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/se/kth/id2203/beb/BEBPort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="1" lean-forward="false" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/se/kth/id2203/beb/BEBMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="17" column="18" lean-forward="true" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/se/kth/id2203/beb/BEBDeliver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/test/java/se/kth/id2203/simulation/OpsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/se/kth/id2203/beb/BEB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="13" column="51" lean-forward="true" selection-start-line="13" selection-start-column="51" selection-end-line="13" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/se/kth/id2203/bootstrapping/BootstrapServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="86" column="39" lean-forward="true" selection-start-line="86" selection-start-column="39" selection-end-line="86" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/se/kth/id2203/bootstrapping/BootstrapClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="57" column="98" lean-forward="false" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="98" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/src/main/java/se/kth/id2203/overlay/LookupTable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="54" column="9" lean-forward="false" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/se/kth/id2203/elect/Elect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="420">
+          <caret line="58" column="44" lean-forward="true" selection-start-line="58" selection-start-column="44" selection-end-line="58" selection-end-column="44" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#2268#2269#0" expanded="true" />
+            <element signature="e#2310#2311#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/se/kth/id2203/ParentComponent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="44" column="46" lean-forward="false" selection-start-line="44" selection-start-column="46" selection-end-line="44" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/src.zip!/java/util/HashMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="609" column="13" lean-forward="false" selection-start-line="609" selection-start-column="13" selection-end-line="609" selection-end-column="13" />
-          <folding>
-            <element signature="e#24298#24299#0" expanded="true" />
-            <element signature="e#24363#24364#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/se/kth/id2203/kvstore/OperationCAS.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="46" lean-forward="false" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/se/kth/id2203/kvstore/KVService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="84" column="107" lean-forward="false" selection-start-line="84" selection-start-column="107" selection-end-line="84" selection-end-column="107" />
-          <folding />
         </state>
       </provider>
     </entry>

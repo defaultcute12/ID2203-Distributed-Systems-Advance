@@ -12,6 +12,8 @@ import java.io.Serializable;
 
 public class BEBMessage extends NetMessage implements Serializable {
 
+    private static final long serialVersionUID = -5669233156267202337L;
+
     private NetAddress source;
     private BEBDeliver data;
 
