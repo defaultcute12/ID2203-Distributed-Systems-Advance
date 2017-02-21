@@ -43,6 +43,8 @@ public class KVService extends ComponentDefinition {
     final static Logger LOG = LoggerFactory.getLogger(KVService.class);
     //******* Ports ******
     protected final Positive<Network> net = requires(Network.class);
+    protected final Positive<Routing> route = requires(Routing.class);
+
     //******* Fields ******
     final NetAddress self = config().getValue("id2203.project.address", NetAddress.class);
     protected HashMap<String, String> kvstore = new HashMap<String, String>() {

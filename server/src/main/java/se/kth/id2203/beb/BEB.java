@@ -1,8 +1,8 @@
 package se.kth.id2203.beb;
-
 /**
  * Created by Mallu on 20-02-2017.
  */
+import se.kth.id2203.beb.BEBPort;
 import se.kth.id2203.networking.NetAddress;
 import se.sics.kompics.*;
 import se.sics.kompics.network.Network;
