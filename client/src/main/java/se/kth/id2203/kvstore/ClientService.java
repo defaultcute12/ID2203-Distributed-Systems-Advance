@@ -134,19 +134,19 @@ public class ClientService extends ComponentDefinition {
     }
 
     Future<OpResponse> get(String key) {
-        OperationGET op = new OperationGET(key);
+        OperationGET op = new OperationGET(key, self);
         OpWithFuture owf = new OpWithFuture(op);
         trigger(owf, onSelf);
         return owf.f;
     }
     Future<OpResponse> put(String key, String value) {
-        OperationPUT op = new OperationPUT(key, value);
+        OperationPUT op = new OperationPUT(key, self, value);
         OpWithFuture owf = new OpWithFuture(op);
         trigger(owf, onSelf);
         return owf.f;
     }
     Future<OpResponse> cas(String key, String refValue, String newValue) {
-        OperationCAS op = new OperationCAS(key, refValue, newValue);
+        OperationCAS op = new OperationCAS(key, self, refValue, newValue);
         OpWithFuture owf = new OpWithFuture(op);
         trigger(owf, onSelf);
         return owf.f;

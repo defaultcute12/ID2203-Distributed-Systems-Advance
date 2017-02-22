@@ -7,6 +7,7 @@ import se.kth.id2203.beb.BEBPort;
 import se.kth.id2203.bootstrapping.BootstrapClient;
 import se.kth.id2203.bootstrapping.BootstrapServer;
 import se.kth.id2203.bootstrapping.Bootstrapping;
+import se.kth.id2203.kvstore.KVPort;
 import se.kth.id2203.kvstore.KVService;
 import se.kth.id2203.networking.NetAddress;
 import se.kth.id2203.overlay.Routing;
@@ -25,6 +26,7 @@ public class ParentComponent extends ComponentDefinition {
     protected final Positive<Network> net = requires(Network.class);
     protected final Positive<Timer> timer = requires(Timer.class);
     protected final Positive<BEBPort> bebPort = requires(BEBPort.class);
+    protected final Positive<KVPort> kvPort = requires(KVPort.class);
     //******* Children ******
     protected final Component overlay = create(VSOverlayManager.class, Init.NONE);
     protected final Component kv = create(KVService.class, Init.NONE);
@@ -45,7 +47,7 @@ public class ParentComponent extends ComponentDefinition {
         connect(boot.getPositive(Bootstrapping.class), overlay.getNegative(Bootstrapping.class), Channel.TWO_WAY);
         connect(net, overlay.getNegative(Network.class), Channel.TWO_WAY);
         // KV
-        connect(overlay.getPositive(Routing.class), kv.getNegative(Routing.class), Channel.TWO_WAY);
+        connect(overlay.getNegative(KVPort.class), kv.getPositive(KVPort.class), Channel.TWO_WAY);
         connect(net, kv.getNegative(Network.class), Channel.TWO_WAY);
         // BEB
         connect(overlay.getNegative(BEBPort.class), beb.getPositive(BEBPort.class), Channel.TWO_WAY);

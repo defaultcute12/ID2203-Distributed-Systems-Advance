@@ -25,8 +25,12 @@ package se.kth.id2203.overlay;
 
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Iterables;
+import com.google.common.collect.Multiset;
 import com.google.common.collect.TreeMultimap;
+
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Set;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -47,8 +51,11 @@ public class LookupTable implements NodeAssignment {
 
     private final TreeMultimap<Integer, NetAddress> partitions = TreeMultimap.create();
 
-    public Collection<NetAddress> lookup(String key) {
-        int keyHash = key.hashCode() % KEY_MAX;
+    public int hash(String key) {
+        return key.hashCode() % KEY_MAX;
+    }
+
+    public Collection<NetAddress> lookup(int keyHash) {
         Integer partition = partitions.keySet().floor(keyHash);
         if (partition == null) {
             partition = partitions.keySet().last();
@@ -58,6 +65,10 @@ public class LookupTable implements NodeAssignment {
 
     public Collection<NetAddress> getNodes() {
         return partitions.values();
+    }
+
+    public Set<Integer> getKeys() {
+        return partitions.keys().elementSet();
     }
 
     @Override
@@ -88,8 +99,6 @@ public class LookupTable implements NodeAssignment {
                 lut.partitions.put(key.intValue(), nodes.asList().get(i*REPLICATION_DEGREE+j));
             }
         }
-
-        //lut.partitions.putAll(0, nodes);
         return lut;
     }
 }

@@ -42,10 +42,8 @@ public class KVService extends ComponentDefinition {
 
     final static Logger LOG = LoggerFactory.getLogger(KVService.class);
     //******* Ports ******
-    protected final Positive<Routing> route = requires(Routing.class);
     protected final Positive<Network> net = requires(Network.class);
-    protected final Positive<Routing> route = requires(Routing.class);
-
+    protected final Negative<KVPort> kv = provides(KVPort.class);
     //******* Fields ******
     final NetAddress self = config().getValue("id2203.project.address", NetAddress.class);
     protected HashMap<String, String> kvstore = new HashMap<String, String>() {
@@ -57,42 +55,45 @@ public class KVService extends ComponentDefinition {
         }
     };
     //******* Handlers ******
-    protected final ClassMatchedHandler<OperationGET, Message> getHandler = new ClassMatchedHandler<OperationGET, Message>() {
+    protected final Handler<OperationGET> getHandler = new Handler<OperationGET>() {
 
         @Override
-        public void handle(OperationGET content, Message context) {
+        public void handle(OperationGET content) {
+            LOG.debug("Handler<OperationGET>");
             String response = kvstore.get(content.key);
-            trigger(new Message(self, context.getSource(), new OpResponse(content.id, response, Code.OK)), net);
+            trigger(new Message(self, content.getRespondTo(), new OpResponse(content.id, response, Code.OK)), net);
         }
     };
-    protected final ClassMatchedHandler<OperationPUT, Message> putHandler = new ClassMatchedHandler<OperationPUT, Message>() {
+    protected final Handler<OperationPUT> putHandler = new Handler<OperationPUT>() {
 
         @Override
-        public void handle(OperationPUT content, Message context) {
+        public void handle(OperationPUT content) {
+            LOG.debug("Handler<OperationPUT>");
             String response;
             if(kvstore.put(content.key, content.value) != null) {
                 response = "Successfully added (" + content.key + "," + content.value + ")";
             } else {
                 response = "FAIL, could not add (" + content.key + "," + content.value + ")";
             }
-            trigger(new Message(self, context.getSource(), new OpResponse(content.id, response, Code.OK)), net);
+            trigger(new Message(self, content.getRespondTo(), new OpResponse(content.id, response, Code.OK)), net);
         }
     };
-    protected final ClassMatchedHandler<OperationCAS, Message> casHandler = new ClassMatchedHandler<OperationCAS, Message>() {
+    protected final Handler<OperationCAS> casHandler = new Handler<OperationCAS>() {
 
         @Override
-        public void handle(OperationCAS content, Message context) {
+        public void handle(OperationCAS content) {
+            LOG.debug("Handler<OperationCAS>");
             if(kvstore.get(content.key).compareTo(content.refValue) > 0) {
                 kvstore.replace(content.key, content.newValue);
             }
             String response = "Successfully CAS (" + kvstore.get(content.key) + "," + content.newValue + ")";
-            trigger(new Message(self, context.getSource(), new OpResponse(content.id, response, Code.OK)), net);
+            trigger(new Message(self, content.getRespondTo(), new OpResponse(content.id, response, Code.OK)), net);
         }
     };
 
     {
-        subscribe(getHandler, net);
-        subscribe(putHandler, net);
-        subscribe(casHandler, net);
+        subscribe(getHandler, kv);
+        subscribe(putHandler, kv);
+        subscribe(casHandler, kv);
     }
 }

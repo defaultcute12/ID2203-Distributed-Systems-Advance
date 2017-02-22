@@ -1,6 +1,7 @@
 package se.kth.id2203.kvstore;
 
 import com.google.common.base.MoreObjects;
+import se.kth.id2203.networking.NetAddress;
 import se.sics.kompics.KompicsEvent;
 
 import java.io.Serializable;
@@ -14,8 +15,8 @@ public class OperationCAS extends Operation {
     public final String refValue;
     public final String newValue;
 
-    public OperationCAS(String key, String refValue, String newValue) {
-        super(key);
+    public OperationCAS(String key, NetAddress respondTo, String refValue, String newValue) {
+        super(key, respondTo);
         this.refValue = refValue;
         this.newValue = newValue;
     }

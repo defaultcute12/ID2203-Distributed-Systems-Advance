@@ -10,19 +10,19 @@ import java.util.Collection;
 
 public class BEBRequest implements KompicsEvent {
 
-    private final BEBDeliver deliverEvent;
+    private final BEBDeliver deliver;
     private final Collection<NetAddress> nodes;
 
-    public BEBRequest(BEBDeliver deliverEvent, Collection<NetAddress> nodes) {
-        this.deliverEvent = deliverEvent;
+    public BEBRequest(BEBDeliver deliver, Collection<NetAddress> nodes) {
+        this.deliver = deliver;
         this.nodes = nodes;
     }
 
-    public BEBDeliver getDeliverEvent() {
-        return deliverEvent;
+    public BEBDeliver getDeliver() {
+        return deliver;
     }
 
-    public Collection<NetAddress> getBroadcastNodes() {
+    public Collection<NetAddress> getNodes() {
         return nodes;
     }
 }

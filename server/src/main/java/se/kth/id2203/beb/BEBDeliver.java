@@ -12,19 +12,19 @@ import java.io.Serializable;
 public class BEBDeliver implements KompicsEvent, Serializable {
 
     private static final long serialVersionUID = 4088333329204792579L;
-    private NetAddress source;
-    private Object data;
+    private NetAddress src;
+    private KompicsEvent event;
 
-    public BEBDeliver(NetAddress source, Object data) {
-        this.source = source;
-        this.data = data;
+    public BEBDeliver(NetAddress src, KompicsEvent event) {
+        this.src = src;
+        this.event = event;
     }
 
     public NetAddress getSource() {
-        return source;
+        return src;
     }
 
-    public Object getData() {
-        return data;
+    public KompicsEvent getEvent() {
+        return event;
     }
 }

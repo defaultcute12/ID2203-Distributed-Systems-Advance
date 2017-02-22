@@ -2,7 +2,8 @@ package se.kth.id2203.beb;
 /**
  * Created by Mallu on 20-02-2017.
  */
-import se.kth.id2203.beb.BEBPort;
+
+import se.kth.id2203.networking.Message;
 import se.kth.id2203.networking.NetAddress;
 import se.sics.kompics.*;
 import se.sics.kompics.network.Network;
@@ -15,46 +16,27 @@ public class BEB extends ComponentDefinition {
 
     final NetAddress self = config().getValue("id2203.project.address", NetAddress.class);
 
-
-    Handler<Start> startHandler = new Handler<Start>() {
-        @Override
-        public void handle(Start event) {
-
-        }
-    };
-
-    //Perform broadcast using Perfect Links
     private Handler<BEBRequest> broadcastHandler = new Handler<BEBRequest>() {
         @Override
         public void handle(BEBRequest event) {
-            Collection<NetAddress> nodes = event.getBroadcastNodes();
+            Collection<NetAddress> nodes = event.getNodes();
             for (NetAddress node : nodes) {
-                printBroadcast(event.getDeliverEvent(), node);
-                BEBMessage msg = new BEBMessage(self, node, event.getDeliverEvent());
-                trigger(msg, net);
+                System.out.println("Broadcasting from: " + self + " to " + node);
+                trigger(new Message(self, node, event.getDeliver()), net);
             }
         }
     };
 
-    private void printBroadcast(BEBDeliver deliver, NetAddress node) {
-        System.out.println("Sending broadcast");
-    }
+    private ClassMatchedHandler<BEBDeliver, Message> deliverHandler = new ClassMatchedHandler<BEBDeliver, Message>() {
 
-    private void printDeliver(BEBDeliver deliver, NetAddress node) {
-        System.out.println("Delivered broadcast");
-    }
-
-    //Deliver to application
-    private Handler<BEBMessage> deliverHandler = new Handler<BEBMessage>() {
         @Override
-        public void handle(BEBMessage event) {
-            printDeliver(event.getData(), event.getSource());
-            trigger(event.getData(), beb);
+        public void handle(BEBDeliver content, Message context) {
+            System.out.println("Delivering to: " + self);
+            trigger(new Message(content.getSource(), self, content.getEvent()), net);
         }
     };
 
     {
-        subscribe(startHandler, control);
         subscribe(broadcastHandler, beb);
         subscribe(deliverHandler, net);
     }

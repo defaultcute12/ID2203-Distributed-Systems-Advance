@@ -24,14 +24,15 @@
 package se.kth.id2203.bootstrapping;
 
 import com.google.common.collect.ImmutableSet;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.UUID;
+
+import java.util.*;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import se.kth.id2203.networking.Message;
 import se.kth.id2203.networking.NetAddress;
-import se.kth.id2203.elect.Elect;
+import se.kth.id2203.le.Elect;
+import se.kth.id2203.overlay.LookupTable;
 import se.sics.kompics.ClassMatchedHandler;
 import se.sics.kompics.ComponentDefinition;
 import se.sics.kompics.Handler;
@@ -87,7 +88,15 @@ public class BootstrapServer extends ComponentDefinition {
                     state = State.DONE;
                 }
             } else if (state == State.DONE) {
-                trigger(new Elect(self), boot);
+                LookupTable lut = (LookupTable) initialAssignment;
+                Set<Integer> keys = lut.getKeys();
+                for(Integer key : keys) {
+                    Collection<NetAddress> partition = lut.lookup(key);
+                    NetAddress leader = partition.iterator().next();
+                    for(NetAddress node : lut.lookup(key)) {
+                        trigger(new Elect(leader), net);
+                    }
+                }
                 suicide();
             }
         }
@@ -100,6 +109,7 @@ public class BootstrapServer extends ComponentDefinition {
             for (NetAddress node : active) {
                 trigger(new Message(self, node, new Boot(initialAssignment)), net);
             }
+
             ready.add(self);
         }
     };

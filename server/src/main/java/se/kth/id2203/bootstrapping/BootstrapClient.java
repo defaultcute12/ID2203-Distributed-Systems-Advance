@@ -75,6 +75,7 @@ public class BootstrapClient extends ComponentDefinition {
             timeoutId = spt.getTimeoutEvent().getTimeoutId();
         }
     };
+
     protected final Handler<BSTimeout> timeoutHandler = new Handler<BSTimeout>() {
 
         @Override

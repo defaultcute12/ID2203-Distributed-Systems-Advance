@@ -23,6 +23,7 @@
  */
 package se.kth.id2203.overlay;
 
+import se.kth.id2203.kvstore.Operation;
 import se.sics.kompics.PortType;
 
 /**
@@ -31,6 +32,6 @@ import se.sics.kompics.PortType;
  */
 public class Routing extends PortType {
     {
-        request(RouteMsg.class);
+        request(Operation.class);
     }
 }

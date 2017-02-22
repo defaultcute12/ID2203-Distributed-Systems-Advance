@@ -32,7 +32,7 @@ import se.kth.id2203.kvstore.OpResponse;
 import se.kth.id2203.kvstore.Operation;
 import se.kth.id2203.networking.Message;
 import se.kth.id2203.networking.NetAddress;
-import se.kth.id2203.overlay.RouteMsg;
+//import se.kth.id2203.overlay.RouteMsg;
 import se.sics.kompics.ClassMatchedHandler;
 import se.sics.kompics.ComponentDefinition;
 import se.sics.kompics.Handler;
@@ -63,12 +63,12 @@ public class ScenarioClient extends ComponentDefinition {
         public void handle(Start event) {
             int messages = res.get("messages", Integer.class);
             for (int i = 0; i < messages; i++) {
-                Operation op = new Operation("test" + i);
-                RouteMsg rm = new RouteMsg(op.key, op); // don't know which partition is responsible, so ask the bootstrap server to forward it
-                trigger(new Message(self, server, rm), net);
-                pending.put(op.id, op.key);
-                LOG.info("Sending {}", op);
-                res.put(op.key, "SENT");
+                //Operation op = new Operation("test" + i);
+//                RouteMsg rm = new RouteMsg(op.key, op); // don't know which partition is responsible, so ask the bootstrap server to forward it
+                //trigger(new Message(self, server, rm), net);
+                //pending.put(op.id, op.key);
+                //LOG.info("Sending {}", op);
+                //res.put(op.key, "SENT");
             }
         }
     };

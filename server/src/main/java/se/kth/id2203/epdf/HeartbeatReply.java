@@ -12,11 +12,12 @@ import se.sics.kompics.network.Transport;
 import java.io.Serializable;
 
 public class HeartbeatReply extends NetMessage implements Serializable {
-    public HeartbeatReply(NetAddress src, NetAddress dst) {
+    final protected int seqnum;
+    public HeartbeatReply(NetAddress src, NetAddress dst, int seqnum) {
         super(src, dst, Transport.TCP);
+        this.seqnum = seqnum;
     }
-
-    public HeartbeatReply(NetAddress src, NetAddress dst, Transport proto) {
-        super(src,dst,proto);
+    public int getSeqnum() {
+        return seqnum;
     }
 }

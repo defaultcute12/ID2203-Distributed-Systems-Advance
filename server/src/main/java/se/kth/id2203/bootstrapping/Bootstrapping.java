@@ -23,7 +23,7 @@
  */
 package se.kth.id2203.bootstrapping;
 
-import se.kth.id2203.elect.Elect;
+import se.kth.id2203.le.Elect;
 import se.sics.kompics.PortType;
 
 public class Bootstrapping extends PortType {

@@ -49,5 +49,4 @@ public class OpsTest {
             // of course the correct response should be SUCCESS not NOT_IMPLEMENTED, but like this the test passes
         }
     }
-
 }
