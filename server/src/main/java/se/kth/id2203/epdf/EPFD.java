@@ -3,6 +3,7 @@ package se.kth.id2203.epdf;
 /**
  * Created by Mallu on 21-02-2017.
  */
+import se.kth.id2203.bootstrapping.Bootstrapping;
 import se.kth.id2203.networking.NetAddress;
 import se.sics.kompics.*;
 import se.sics.kompics.network.Network;
@@ -17,23 +18,17 @@ import java.util.UUID;
 
 public class EPFD extends ComponentDefinition {
 
-    private final ArrayList<NetAddress> topology;
-    private final ArrayList<NetAddress> suspected;
-    private final ArrayList<NetAddress> alive;
-    private final NetAddress self;
-    private int period = 40;
-    private int delta = 10;
-    private int seqnum = 0;
-    Positive<Network> net = requires(Network.class);
-    Positive<Timer> timer = requires(Timer.class);
-    Negative<EPFDPort> epfd = provides(EPFDPort.class);
-
-    public EPFD(Init init) {
-        this.topology = init.topology;
-        suspected = new ArrayList<>();
-        alive = new ArrayList<>();
-        this.self = init.self;
-    }
+    protected ArrayList<NetAddress> partition;
+    protected ArrayList<NetAddress> suspected = new ArrayList<>();
+    protected ArrayList<NetAddress> alive = new ArrayList<>();
+    protected final NetAddress self = config().getValue("id2203.project.address", NetAddress.class);
+    protected int period = 40;
+    protected int delta = 10;
+    protected int seqnum = 0;
+    protected final Positive<Network> net = requires(Network.class);
+    protected final Positive<Timer> timer = requires(Timer.class);
+    protected final Positive<Bootstrapping> boot = requires(Bootstrapping.class);
+    protected final Negative<EPFDPort> epfd = provides(EPFDPort.class);
 
     private void startTimer(int period) {
         ScheduleTimeout st = new ScheduleTimeout(period);
@@ -42,16 +37,17 @@ public class EPFD extends ComponentDefinition {
         trigger(st, timer);
     }
 
-    Handler<Start> startHandler = new Handler<Start>() {
+    protected Handler<EPFDBooted> bootedHandler = new Handler<EPFDBooted>() {
 
         @Override
-        public void handle(Start event) {
-            alive.addAll(topology);
+        public void handle(EPFDBooted event) {
+            partition = event.getPartition();
+            alive.addAll(partition);
             startTimer(period);
         }
     };
 
-    Handler<HeartbeatTimeout> heartbeatTimeoutHandler = new Handler<HeartbeatTimeout>() {
+    protected Handler<HeartbeatTimeout> heartbeatTimeoutHandler = new Handler<HeartbeatTimeout>() {
 
         @Override
         public void handle(HeartbeatTimeout event) {
@@ -63,7 +59,7 @@ public class EPFD extends ComponentDefinition {
             }
             seqnum = seqnum + 1;
 
-            for(NetAddress p : topology) {
+            for(NetAddress p : partition) {
                 if(!alive.contains(p) && !suspected.contains(p)) {
                     suspected.add(p);
                     trigger(new Suspect(p), epfd);
@@ -78,14 +74,14 @@ public class EPFD extends ComponentDefinition {
         }
     };
 
-    Handler<HeartbeatRequest> heartbeatRequestHandler = new Handler<HeartbeatRequest>() {
+    protected Handler<HeartbeatRequest> heartbeatRequestHandler = new Handler<HeartbeatRequest>() {
         @Override
         public void handle(HeartbeatRequest event) {
             trigger(new HeartbeatReply(self, event.getSource(), event.getSeqnum()), net);
         }
     };
 
-    Handler<HeartbeatReply> heartbeatReplyHandler = new Handler<HeartbeatReply>() {
+    protected Handler<HeartbeatReply> heartbeatReplyHandler = new Handler<HeartbeatReply>() {
         @Override
         public void handle(HeartbeatReply event) {
             if(event.getSeqnum() == seqnum || suspected.contains(event.getSource())) {
@@ -101,18 +97,8 @@ public class EPFD extends ComponentDefinition {
         }
     }
 
-    public static class Init extends se.sics.kompics.Init<EPFD> {
-        public final NetAddress self;
-        public final ArrayList<NetAddress> topology;
-
-        public Init(NetAddress self, ArrayList<NetAddress> topology) {
-            this.self = self;
-            this.topology = topology;
-        }
-    }
-
     {
-        subscribe(startHandler, control);
+        subscribe(bootedHandler, boot);
         subscribe(heartbeatTimeoutHandler, timer);
         subscribe(heartbeatRequestHandler, net);
         subscribe(heartbeatReplyHandler, net);

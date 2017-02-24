@@ -23,10 +23,14 @@
  */
 package se.kth.id2203.bootstrapping;
 
+import java.util.ArrayList;
 import java.util.UUID;
 import org.slf4j.LoggerFactory;
+import se.kth.id2203.epdf.EPFDBooted;
+import se.kth.id2203.meld.MELDBooted;
 import se.kth.id2203.networking.Message;
 import se.kth.id2203.networking.NetAddress;
+import se.kth.id2203.overlay.LookupTable;
 import se.sics.kompics.ClassMatchedHandler;
 import se.sics.kompics.ComponentDefinition;
 import se.sics.kompics.Handler;
@@ -51,7 +55,7 @@ public class BootstrapClient extends ComponentDefinition {
 
     private static final org.slf4j.Logger LOG = LoggerFactory.getLogger(BootstrapClient.class);
     //******* Ports ******
-    final Negative<Bootstrapping> bootstrap = provides(Bootstrapping.class);
+    final Negative<Bootstrapping> boot = provides(Bootstrapping.class);
     final Positive<Timer> timer = requires(Timer.class);
     final Positive<Network> net = requires(Network.class);
     //******* Fields ******
@@ -96,7 +100,11 @@ public class BootstrapClient extends ComponentDefinition {
         public void handle(Boot content, Message context) {
             if (state == State.WAITING) {
                 LOG.info("{} Booting up.", self);
-                trigger(new Booted(content.assignment), bootstrap);
+                LookupTable lut = (LookupTable) content.assignment;
+                ArrayList<NetAddress> partition = new ArrayList<>(lut.lookup(lut.getKeyOfNode(self)));
+                trigger(new Booted(content.assignment), boot);
+                trigger(new EPFDBooted(partition), boot);
+                trigger(new MELDBooted(partition), boot);
                 trigger(new CancelPeriodicTimeout(timeoutId), timer);
                 trigger(new Message(self, server, Ready.event), net);
                 state = State.STARTED;

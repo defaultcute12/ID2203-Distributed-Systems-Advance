@@ -30,8 +30,9 @@ import se.kth.id2203.beb.BEBRequest;
 import se.kth.id2203.beb.BEBDeliver;
 import se.kth.id2203.beb.BEBPort;
 import se.kth.id2203.bootstrapping.*;
-import se.kth.id2203.le.Elect;
+import se.kth.id2203.meld.Elect;
 import se.kth.id2203.kvstore.*;
+import se.kth.id2203.meld.MELDPort;
 import se.kth.id2203.networking.Message;
 import se.kth.id2203.networking.NetAddress;
 import se.sics.kompics.*;
@@ -58,6 +59,7 @@ public class VSOverlayManager extends ComponentDefinition {
     protected final Positive<Timer> timer = requires(Timer.class);
     protected final Positive<BEBPort> beb = requires(BEBPort.class);
     protected final Positive<KVPort> kv = requires(KVPort.class);
+    protected final Positive<MELDPort> meld = requires(MELDPort.class);
     //******* Fields ******
     final NetAddress self = config().getValue("id2203.project.address", NetAddress.class);
     protected NetAddress leader = null;
@@ -85,6 +87,7 @@ public class VSOverlayManager extends ComponentDefinition {
             } else {
                 LOG.error("Got invalid NodeAssignment type. Expected: LookupTable; Got: {}", event.assignment.getClass());
             }
+
         }
     };
     protected final ClassMatchedHandler<Connect, Message> connectHandler = new ClassMatchedHandler<Connect, Message>() {
@@ -121,11 +124,10 @@ public class VSOverlayManager extends ComponentDefinition {
         }
     };
     protected final Handler<Elect> electHandler = new Handler<Elect>() {
-
         @Override
-        public void handle(Elect elect) {
+        public void handle(Elect event) {
             LOG.debug("Handler<Elect>");
-            leader = self;
+            leader = event.leader;
         }
     };
 
@@ -134,6 +136,6 @@ public class VSOverlayManager extends ComponentDefinition {
         subscribe(bootHandler, boot);
         subscribe(routeHandler, net);
         subscribe(connectHandler, net);
-        subscribe(electHandler, boot);
+        subscribe(electHandler, meld);
     }
 }

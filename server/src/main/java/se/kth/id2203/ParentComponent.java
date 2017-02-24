@@ -7,10 +7,13 @@ import se.kth.id2203.beb.BEBPort;
 import se.kth.id2203.bootstrapping.BootstrapClient;
 import se.kth.id2203.bootstrapping.BootstrapServer;
 import se.kth.id2203.bootstrapping.Bootstrapping;
+import se.kth.id2203.epdf.EPFD;
+import se.kth.id2203.epdf.EPFDPort;
 import se.kth.id2203.kvstore.KVPort;
 import se.kth.id2203.kvstore.KVService;
+import se.kth.id2203.meld.MELD;
+import se.kth.id2203.meld.MELDPort;
 import se.kth.id2203.networking.NetAddress;
-import se.kth.id2203.overlay.Routing;
 import se.kth.id2203.overlay.VSOverlayManager;
 import se.sics.kompics.Channel;
 import se.sics.kompics.Component;
@@ -31,6 +34,8 @@ public class ParentComponent extends ComponentDefinition {
     protected final Component overlay = create(VSOverlayManager.class, Init.NONE);
     protected final Component kv = create(KVService.class, Init.NONE);
     protected final Component beb = create(BEB.class, Init.NONE);
+    protected final Component epfd = create(EPFD.class, Init.NONE);
+    protected final Component meld = create(MELD.class, Init.NONE);
     protected final Component boot;
 
     {
@@ -52,5 +57,14 @@ public class ParentComponent extends ComponentDefinition {
         // BEB
         connect(overlay.getNegative(BEBPort.class), beb.getPositive(BEBPort.class), Channel.TWO_WAY);
         connect(net, beb.getNegative(Network.class), Channel.TWO_WAY);
+        // EPFD
+        connect(boot.getPositive(Bootstrapping.class), epfd.getNegative(Bootstrapping.class), Channel.TWO_WAY);
+        connect(timer, epfd.getNegative(Timer.class), Channel.TWO_WAY);
+        connect(net, epfd.getNegative(Network.class), Channel.TWO_WAY);
+        // MELD
+        connect(boot.getPositive(Bootstrapping.class), meld.getNegative(Bootstrapping.class), Channel.TWO_WAY);
+        connect(overlay.getNegative(MELDPort.class), meld.getPositive(MELDPort.class), Channel.TWO_WAY);
+        connect(meld.getNegative(EPFDPort.class), epfd.getPositive(EPFDPort.class), Channel.TWO_WAY);
+        //connect(net, meld.getNegative(Network.class), Channel.TWO_WAY); // Maybe remove?
     }
 }

@@ -25,11 +25,11 @@ package se.kth.id2203.overlay;
 
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Iterables;
-import com.google.common.collect.Multiset;
 import com.google.common.collect.TreeMultimap;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.Set;
 
 import org.slf4j.Logger;
@@ -50,6 +50,7 @@ public class LookupTable implements NodeAssignment {
     private static final long serialVersionUID = -8766981433378303267L;
 
     private final TreeMultimap<Integer, NetAddress> partitions = TreeMultimap.create();
+    private final HashMap<NetAddress, Integer> keyofnode = new HashMap<>();
 
     public int hash(String key) {
         return key.hashCode() % KEY_MAX;
@@ -97,8 +98,25 @@ public class LookupTable implements NodeAssignment {
                 Float key = i*share;
                 LOG.info("Lookup table key: " + key + " and share " + share);
                 lut.partitions.put(key.intValue(), nodes.asList().get(i*REPLICATION_DEGREE+j));
+                lut.keyofnode.put(nodes.asList().get(i*REPLICATION_DEGREE+j), key.intValue());
             }
         }
         return lut;
     }
+
+    public Integer getKeyOfNode(NetAddress node) {
+        return keyofnode.get(node);
+    }
+
+/*    static ArrayList<NetAddress> getPartition() {
+        LookupTable lut = (LookupTable) initialAssignment;
+        Set<Integer> keys = lut.getKeys();
+        partitions.entries().
+        for(Integer key : keys) {
+            Collection<NetAddress> partition = lut.lookup(key);
+            NetAddress leader = partition.iterator().next();
+            for(NetAddress node : lut.lookup(key)) {
+                trigger(new Message(self, node, new Elect(leader)), net);
+            }
+        }*/
 }

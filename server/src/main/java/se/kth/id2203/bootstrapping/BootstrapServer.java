@@ -29,9 +29,10 @@ import java.util.*;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import se.kth.id2203.epdf.EPFDBooted;
+import se.kth.id2203.meld.MELDBooted;
 import se.kth.id2203.networking.Message;
 import se.kth.id2203.networking.NetAddress;
-import se.kth.id2203.le.Elect;
 import se.kth.id2203.overlay.LookupTable;
 import se.sics.kompics.ClassMatchedHandler;
 import se.sics.kompics.ComponentDefinition;
@@ -84,19 +85,14 @@ public class BootstrapServer extends ComponentDefinition {
                 LOG.info("{} hosts in ready set.", ready.size());
                 if (ready.size() >= bootThreshold) {
                     LOG.info("Finished seeding. Bootstrapping complete.");
-                    trigger(new Booted(initialAssignment), boot);
+                    LookupTable lut = (LookupTable) initialAssignment;
+                    ArrayList<NetAddress> partition = new ArrayList<>(lut.lookup(lut.getKeyOfNode(self)));
+                    trigger(new Booted(initialAssignment), boot); // Send Booted to BootstrapServer's VSOverlayManager
+                    trigger(new EPFDBooted(partition), boot);
+                    trigger(new MELDBooted(partition), boot);
                     state = State.DONE;
                 }
             } else if (state == State.DONE) {
-                LookupTable lut = (LookupTable) initialAssignment;
-                Set<Integer> keys = lut.getKeys();
-                for(Integer key : keys) {
-                    Collection<NetAddress> partition = lut.lookup(key);
-                    NetAddress leader = partition.iterator().next();
-                    for(NetAddress node : lut.lookup(key)) {
-                        trigger(new Elect(leader), net);
-                    }
-                }
                 suicide();
             }
         }
@@ -109,7 +105,6 @@ public class BootstrapServer extends ComponentDefinition {
             for (NetAddress node : active) {
                 trigger(new Message(self, node, new Boot(initialAssignment)), net);
             }
-
             ready.add(self);
         }
     };

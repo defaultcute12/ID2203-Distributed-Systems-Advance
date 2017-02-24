@@ -23,15 +23,17 @@
  */
 package se.kth.id2203.bootstrapping;
 
-import se.kth.id2203.le.Elect;
+import se.kth.id2203.epdf.EPFDBooted;
+import se.kth.id2203.meld.MELDBooted;
 import se.sics.kompics.PortType;
 
 public class Bootstrapping extends PortType {
 
     {
-        indication(Elect.class);
         indication(GetInitialAssignments.class);
         indication(Booted.class);
+        indication(MELDBooted.class);
+        indication(EPFDBooted.class);
         request(InitialAssignments.class);
     }
 }
