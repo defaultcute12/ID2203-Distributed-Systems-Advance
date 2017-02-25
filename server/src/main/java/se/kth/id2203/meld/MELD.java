@@ -17,7 +17,6 @@ import java.util.ArrayList;
  */
 public class MELD extends ComponentDefinition {
 
-    //protected final Positive<Network> net = requires(Network.class);
     protected final Positive<Bootstrapping> boot = requires(Bootstrapping.class);
     protected final Positive<EPFDPort> epfd = requires(EPFDPort.class);
     protected final Negative<MELDPort> meld = provides(MELDPort.class);

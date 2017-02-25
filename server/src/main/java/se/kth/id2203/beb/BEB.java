@@ -32,7 +32,7 @@ public class BEB extends ComponentDefinition {
         @Override
         public void handle(BEBDeliver content, Message context) {
             System.out.println("Delivering to: " + self);
-            trigger(new Message(content.getSource(), self, content.getEvent()), net);
+            trigger(content, beb);
         }
     };
 

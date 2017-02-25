@@ -35,6 +35,7 @@ import se.kth.id2203.kvstore.*;
 import se.kth.id2203.meld.MELDPort;
 import se.kth.id2203.networking.Message;
 import se.kth.id2203.networking.NetAddress;
+import se.kth.id2203.riwm.AtomicRegister;
 import se.sics.kompics.*;
 import se.sics.kompics.network.Network;
 import se.sics.kompics.timer.Timer;
@@ -60,6 +61,7 @@ public class VSOverlayManager extends ComponentDefinition {
     protected final Positive<BEBPort> beb = requires(BEBPort.class);
     protected final Positive<KVPort> kv = requires(KVPort.class);
     protected final Positive<MELDPort> meld = requires(MELDPort.class);
+    protected final Positive<AtomicRegister> riwm = requires(AtomicRegister.class);
     //******* Fields ******
     final NetAddress self = config().getValue("id2203.project.address", NetAddress.class);
     protected NetAddress leader = null;
@@ -112,14 +114,23 @@ public class VSOverlayManager extends ComponentDefinition {
             Collection<NetAddress> partition = lut.lookup(lut.hash(content.key));
             if(partition.contains(self)) {
                 if(self.equals(leader)) {
-                    trigger(content.msg, kv);
+                    trigger(content.msg, kv); // TODO: Placeholder
                 } else {
                     trigger(content.msg, kv);
                 }
             } else {
-                BEBDeliver bebDeliver = new BEBDeliver(context.getSource(), content);
-                BEBRequest bebRequest = new BEBRequest(bebDeliver, partition);
-                trigger(bebRequest, beb);
+                trigger(new BEBRequest(new BEBDeliver(context.getSource(), content), partition), beb);
+            }
+        }
+    };
+    protected final ClassMatchedHandler<RouteMsg, BEBDeliver> deliverHandler = new ClassMatchedHandler<RouteMsg, BEBDeliver>() {
+
+        @Override
+        public void handle(RouteMsg content, BEBDeliver context) {
+            if(self.equals(leader)) {
+                trigger(content.msg, kv);
+            } else {
+                trigger(content.msg, kv);
             }
         }
     };
@@ -134,8 +145,9 @@ public class VSOverlayManager extends ComponentDefinition {
     {
         subscribe(initialAssignmentHandler, boot);
         subscribe(bootHandler, boot);
-        subscribe(routeHandler, net);
         subscribe(connectHandler, net);
+        subscribe(routeHandler, net);
+        subscribe(deliverHandler, beb);
         subscribe(electHandler, meld);
     }
 }

@@ -11,5 +11,6 @@
     <orderEntry type="library" name="target1" level="project" />
     <orderEntry type="library" name="target" level="project" />
     <orderEntry type="module" module-name="main1" />
+    <orderEntry type="library" name="Maven: se.sics.kompics:kompics-core:0.9.2-SNAPSHOT" level="project" />
   </component>
 </module>

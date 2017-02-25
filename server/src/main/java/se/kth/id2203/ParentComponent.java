@@ -15,6 +15,8 @@ import se.kth.id2203.meld.MELD;
 import se.kth.id2203.meld.MELDPort;
 import se.kth.id2203.networking.NetAddress;
 import se.kth.id2203.overlay.VSOverlayManager;
+import se.kth.id2203.riwm.AtomicRegister;
+import se.kth.id2203.riwm.RIWM;
 import se.sics.kompics.Channel;
 import se.sics.kompics.Component;
 import se.sics.kompics.ComponentDefinition;
@@ -36,6 +38,7 @@ public class ParentComponent extends ComponentDefinition {
     protected final Component beb = create(BEB.class, Init.NONE);
     protected final Component epfd = create(EPFD.class, Init.NONE);
     protected final Component meld = create(MELD.class, Init.NONE);
+    protected final Component riwm = create(RIWM.class, Init.NONE);
     protected final Component boot;
 
     {
@@ -65,6 +68,9 @@ public class ParentComponent extends ComponentDefinition {
         connect(boot.getPositive(Bootstrapping.class), meld.getNegative(Bootstrapping.class), Channel.TWO_WAY);
         connect(overlay.getNegative(MELDPort.class), meld.getPositive(MELDPort.class), Channel.TWO_WAY);
         connect(meld.getNegative(EPFDPort.class), epfd.getPositive(EPFDPort.class), Channel.TWO_WAY);
-        //connect(net, meld.getNegative(Network.class), Channel.TWO_WAY); // Maybe remove?
+        // RIWM
+        connect(boot.getPositive(Bootstrapping.class), riwm.getNegative(Bootstrapping.class), Channel.TWO_WAY);
+        connect(overlay.getNegative(AtomicRegister.class), riwm.getPositive(AtomicRegister.class), Channel.TWO_WAY);
+        connect(net, riwm.getNegative(Network.class), Channel.TWO_WAY);
     }
 }

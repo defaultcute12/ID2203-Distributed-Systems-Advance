@@ -34,6 +34,7 @@ import se.kth.id2203.meld.MELDBooted;
 import se.kth.id2203.networking.Message;
 import se.kth.id2203.networking.NetAddress;
 import se.kth.id2203.overlay.LookupTable;
+import se.kth.id2203.riwm.RIWMBooted;
 import se.sics.kompics.ClassMatchedHandler;
 import se.sics.kompics.ComponentDefinition;
 import se.sics.kompics.Handler;
@@ -90,6 +91,7 @@ public class BootstrapServer extends ComponentDefinition {
                     trigger(new Booted(initialAssignment), boot); // Send Booted to BootstrapServer's VSOverlayManager
                     trigger(new EPFDBooted(partition), boot);
                     trigger(new MELDBooted(partition), boot);
+                    trigger(new RIWMBooted(partition), boot);
                     state = State.DONE;
                 }
             } else if (state == State.DONE) {
