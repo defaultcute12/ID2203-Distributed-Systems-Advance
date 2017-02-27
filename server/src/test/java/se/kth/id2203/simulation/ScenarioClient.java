@@ -28,11 +28,11 @@ import java.util.TreeMap;
 import java.util.UUID;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import se.kth.id2203.kvstore.OpResponse;
-import se.kth.id2203.kvstore.Operation;
+import se.kth.id2203.kvstore.*;
 import se.kth.id2203.networking.Message;
 import se.kth.id2203.networking.NetAddress;
 //import se.kth.id2203.overlay.RouteMsg;
+import se.kth.id2203.overlay.RouteMsg;
 import se.sics.kompics.ClassMatchedHandler;
 import se.sics.kompics.ComponentDefinition;
 import se.sics.kompics.Handler;
@@ -63,12 +63,28 @@ public class ScenarioClient extends ComponentDefinition {
         public void handle(Start event) {
             int messages = res.get("messages", Integer.class);
             for (int i = 0; i < messages; i++) {
-                //Operation op = new Operation("test" + i);
-//                RouteMsg rm = new RouteMsg(op.key, op); // don't know which partition is responsible, so ask the bootstrap server to forward it
-                //trigger(new Message(self, server, rm), net);
-                //pending.put(op.id, op.key);
-                //LOG.info("Sending {}", op);
-                //res.put(op.key, "SENT");
+                RouteMsg rm;
+                /* PUT -----------------------------------------------------------------------------------------------*/
+                OperationPUT opPUT = new OperationPUT("test" + i, self, "Hello");
+                rm = new RouteMsg(opPUT.key, opPUT);
+                trigger(new Message(self, server, rm), net);
+                pending.put(opPUT.id, opPUT.key);
+                LOG.info("Sending {}", opPUT);
+                res.put(opPUT.key, "SENT");
+                /* GET -----------------------------------------------------------------------------------------------*/
+                /*OperationGET opGET = new OperationGET("test" + i, self);
+                rm = new RouteMsg(opGET.key, opGET);
+                trigger(new Message(self, server, rm), net);
+                pending.put(opGET.id, opGET.key);
+                LOG.info("Sending {}", opGET);
+                res.put(opGET.key, "SENT");*/
+                /* CAS -----------------------------------------------------------------------------------------------*/
+                /*OperationCAS opCAS = new OperationCAS("test" + i, self, "Good", "Bye");
+                rm = new RouteMsg(opCAS.key, opCAS);
+                trigger(new Message(self, server, rm), net);
+                pending.put(opCAS.id, opCAS.key);
+                LOG.info("Sending {}", opCAS);
+                res.put(opCAS.key, "SENT");*/
             }
         }
     };

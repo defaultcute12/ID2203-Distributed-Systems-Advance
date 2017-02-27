@@ -137,7 +137,7 @@ public class VSOverlayManager extends ComponentDefinition {
     protected final Handler<Elect> electHandler = new Handler<Elect>() {
         @Override
         public void handle(Elect event) {
-            LOG.debug("Handler<Elect>");
+            LOG.debug("Handler<Elect>: Elected {}", event.leader);
             leader = event.leader;
         }
     };

@@ -24,6 +24,6 @@
 package se.kth.id2203.simulation;
 
 public interface SimulationResultMap {
-    public void put(String key, Object o);
-    public <T> T get(String key, Class<T> tpe);
+    void put(String key, Object o);
+    <T> T get(String key, Class<T> tpe);
 }

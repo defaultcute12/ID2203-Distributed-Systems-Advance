@@ -109,8 +109,8 @@ public class Console implements Runnable {
                         ex.printStackTrace(out);
                         return false;
                     }
-
                 } else {
+                    out.println("Length: " + cmdline.length);
                     return false;
                 }
             }
@@ -246,7 +246,7 @@ public class Console implements Runnable {
                 if (line.isEmpty()) {
                     continue;
                 }
-                String[] cmdline = line.split(" ", 2);
+                String[] cmdline = line.split(" ", 4);
                 String cmd = cmdline[0];
                 Command c = commands.get(cmd);
                 if (c == null) {

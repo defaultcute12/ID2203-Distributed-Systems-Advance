@@ -70,7 +70,7 @@ public class KVService extends ComponentDefinition {
         public void handle(OperationPUT content) {
             LOG.debug("Handler<OperationPUT>");
             String response;
-            if(kvstore.put(content.key, content.value) != null) {
+            if(kvstore.put(content.key, content.value) == null) {
                 response = "Successfully added (" + content.key + "," + content.value + ")";
             } else {
                 response = "FAIL, could not add (" + content.key + "," + content.value + ")";

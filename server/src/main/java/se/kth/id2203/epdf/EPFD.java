@@ -3,6 +3,8 @@ package se.kth.id2203.epdf;
 /**
  * Created by Mallu on 21-02-2017.
  */
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import se.kth.id2203.bootstrapping.Bootstrapping;
 import se.kth.id2203.networking.NetAddress;
 import se.sics.kompics.*;
@@ -18,11 +20,13 @@ import java.util.UUID;
 
 public class EPFD extends ComponentDefinition {
 
+    final static Logger LOG = LoggerFactory.getLogger(EPFD.class);
+
     protected ArrayList<NetAddress> partition;
     protected ArrayList<NetAddress> suspected = new ArrayList<>();
     protected ArrayList<NetAddress> alive = new ArrayList<>();
     protected final NetAddress self = config().getValue("id2203.project.address", NetAddress.class);
-    protected int period = 40;
+    protected int period = 1000;
     protected int delta = 10;
     protected int seqnum = 0;
     protected final Positive<Network> net = requires(Network.class);
@@ -51,25 +55,26 @@ public class EPFD extends ComponentDefinition {
 
         @Override
         public void handle(HeartbeatTimeout event) {
-
             ArrayList<NetAddress> intersect = new ArrayList<>(alive);
             intersect.retainAll(suspected);
             if(intersect.isEmpty()) {
                 period += delta;
             }
             seqnum = seqnum + 1;
-
             for(NetAddress p : partition) {
                 if(!alive.contains(p) && !suspected.contains(p)) {
                     suspected.add(p);
+                    LOG.debug("Suspected {}", p);
                     trigger(new Suspect(p), epfd);
                 } else if(alive.contains(p) && suspected.contains(p)) {
+                    LOG.debug("Restored {}", p);
                     suspected.remove(p);
                     trigger(new Restore(p), epfd);
                 }
                 trigger(new HeartbeatRequest(self, p, seqnum), net);
             }
             alive.clear();
+            LOG.debug("Starting timer with period§: {}", period);
             startTimer(period);
         }
     };

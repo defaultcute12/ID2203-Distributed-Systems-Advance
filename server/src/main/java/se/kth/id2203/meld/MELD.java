@@ -1,5 +1,7 @@
 package se.kth.id2203.meld;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import se.kth.id2203.bootstrapping.Bootstrapping;
 import se.kth.id2203.epdf.EPFDPort;
 import se.kth.id2203.epdf.Restore;
@@ -16,6 +18,8 @@ import java.util.ArrayList;
  * Created by Klas on 2017-02-20.
  */
 public class MELD extends ComponentDefinition {
+
+    final static Logger LOG = LoggerFactory.getLogger(MELD.class);
 
     protected final Positive<Bootstrapping> boot = requires(Bootstrapping.class);
     protected final Positive<EPFDPort> epfd = requires(EPFDPort.class);
@@ -34,7 +38,7 @@ public class MELD extends ComponentDefinition {
             partition = event.getPartition();
             leader = self;
             for(NetAddress node : partition) {
-                if(!suspected.contains(node)); {
+                if(!suspected.contains(node)) {
                     if(node.compareTo(leader) > 0) {
                         leader = node;
                     }
@@ -51,7 +55,7 @@ public class MELD extends ComponentDefinition {
             if(event.getNode().equals(leader)) {
                 leader = self;
                 for(NetAddress node : partition) {
-                    if(!suspected.contains(node)); {
+                    if(!suspected.contains(node)) {
                         if(node.compareTo(leader) > 0) {
                             leader = node;
                         }
