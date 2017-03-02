@@ -7,6 +7,8 @@ import se.sics.kompics.PortType;
  */
 public class Consensus extends PortType {
     {
-
+        request(AscPropose.class);
+        indication(AscDecide.class);
+        indication(AscAbort.class);
     }
 }

@@ -31,6 +31,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import se.kth.id2203.epdf.EPFDBooted;
 import se.kth.id2203.meld.MELDBooted;
+import se.kth.id2203.mp.MPBooted;
 import se.kth.id2203.networking.Message;
 import se.kth.id2203.networking.NetAddress;
 import se.kth.id2203.overlay.LookupTable;
@@ -91,7 +92,7 @@ public class BootstrapServer extends ComponentDefinition {
                     trigger(new Booted(initialAssignment), boot); // Send Booted to BootstrapServer's VSOverlayManager
                     trigger(new EPFDBooted(partition), boot);
                     trigger(new MELDBooted(partition), boot);
-                    trigger(new RIWMBooted(partition), boot);
+                    trigger(new MPBooted(partition), boot);
                     state = State.DONE;
                 }
             } else if (state == State.DONE) {

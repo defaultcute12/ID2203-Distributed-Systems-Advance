@@ -115,9 +115,9 @@ public class ClientService extends ComponentDefinition {
 
         @Override
         public void handle(OpResponse content, Message context) {
-            LOG.debug("Got OpResponse: {}", content);
             SettableFuture<OpResponse> sf = pending.remove(content.id);
             if (sf != null) {
+                LOG.debug("Got OpResponse: {}", content);
                 sf.set(content);
             } else {
                 LOG.warn("ID {} was not pending! Ignoring response.", content.id);

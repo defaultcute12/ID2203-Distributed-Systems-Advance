@@ -25,6 +25,7 @@ package se.kth.id2203.bootstrapping;
 
 import se.kth.id2203.epdf.EPFDBooted;
 import se.kth.id2203.meld.MELDBooted;
+import se.kth.id2203.mp.MPBooted;
 import se.kth.id2203.riwm.RIWMBooted;
 import se.sics.kompics.PortType;
 
@@ -35,7 +36,7 @@ public class Bootstrapping extends PortType {
         indication(Booted.class);
         indication(MELDBooted.class);
         indication(EPFDBooted.class);
-        indication(RIWMBooted.class);
+        indication(MPBooted.class);
         request(InitialAssignments.class);
     }
 }

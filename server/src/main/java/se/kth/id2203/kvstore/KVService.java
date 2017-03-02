@@ -83,7 +83,7 @@ public class KVService extends ComponentDefinition {
         @Override
         public void handle(OperationCAS content) {
             LOG.debug("Handler<OperationCAS>");
-            if(kvstore.get(content.key).compareTo(content.refValue) > 0) {
+            if(kvstore.get(content.key).compareTo(content.refValue) == 0) {
                 kvstore.replace(content.key, content.newValue);
             }
             String response = "Successfully CAS (" + kvstore.get(content.key) + "," + content.newValue + ")";

@@ -28,6 +28,7 @@ import java.util.UUID;
 import org.slf4j.LoggerFactory;
 import se.kth.id2203.epdf.EPFDBooted;
 import se.kth.id2203.meld.MELDBooted;
+import se.kth.id2203.mp.MPBooted;
 import se.kth.id2203.networking.Message;
 import se.kth.id2203.networking.NetAddress;
 import se.kth.id2203.overlay.LookupTable;
@@ -106,7 +107,7 @@ public class BootstrapClient extends ComponentDefinition {
                 trigger(new Booted(content.assignment), boot);
                 trigger(new EPFDBooted(partition), boot);
                 trigger(new MELDBooted(partition), boot);
-                trigger(new RIWMBooted(partition), boot);
+                trigger(new MPBooted(partition), boot);
                 trigger(new CancelPeriodicTimeout(timeoutId), timer);
                 trigger(new Message(self, server, Ready.event), net);
                 state = State.STARTED;

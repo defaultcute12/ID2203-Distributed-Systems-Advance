@@ -33,9 +33,12 @@ import se.kth.id2203.bootstrapping.*;
 import se.kth.id2203.meld.Elect;
 import se.kth.id2203.kvstore.*;
 import se.kth.id2203.meld.MELDPort;
+import se.kth.id2203.mp.AscAbort;
+import se.kth.id2203.mp.AscDecide;
+import se.kth.id2203.mp.AscPropose;
+import se.kth.id2203.mp.Consensus;
 import se.kth.id2203.networking.Message;
 import se.kth.id2203.networking.NetAddress;
-import se.kth.id2203.riwm.AtomicRegister;
 import se.sics.kompics.*;
 import se.sics.kompics.network.Network;
 import se.sics.kompics.timer.Timer;
@@ -61,7 +64,7 @@ public class VSOverlayManager extends ComponentDefinition {
     protected final Positive<BEBPort> beb = requires(BEBPort.class);
     protected final Positive<KVPort> kv = requires(KVPort.class);
     protected final Positive<MELDPort> meld = requires(MELDPort.class);
-    protected final Positive<AtomicRegister> riwm = requires(AtomicRegister.class);
+    protected final Positive<Consensus> asc = requires(Consensus.class);
     //******* Fields ******
     final NetAddress self = config().getValue("id2203.project.address", NetAddress.class);
     protected NetAddress leader = null;
@@ -110,13 +113,14 @@ public class VSOverlayManager extends ComponentDefinition {
 
         @Override
         public void handle(RouteMsg content, Message context) {
-            LOG.debug("ClassMatchedHandler<Operation, Message>");
             Collection<NetAddress> partition = lut.lookup(lut.hash(content.key));
             if(partition.contains(self)) {
                 if(self.equals(leader)) {
-                    trigger(content.msg, kv); // TODO: Placeholder
+                    LOG.debug("ClassMatchedHandler<RouteMsg, Message> Leader received route msg");
+                    trigger(new AscPropose(content.msg), asc); // Reach consensus
                 } else {
-                    trigger(content.msg, kv);
+                    LOG.debug("ClassMatchedHandler<RouteMsg, Message> Forwarding to leader");
+                    trigger(new Message(self, leader, content), net); // Forward to leader
                 }
             } else {
                 trigger(new BEBRequest(new BEBDeliver(context.getSource(), content), partition), beb);
@@ -142,6 +146,22 @@ public class VSOverlayManager extends ComponentDefinition {
         }
     };
 
+    protected final Handler<AscDecide> decideHandler = new Handler<AscDecide>() {
+
+        @Override
+        public void handle(AscDecide ascDecide) {
+            LOG.debug("Handler<AscDecide>: Decided on value");
+            trigger((KompicsEvent)ascDecide.getO(), kv);
+        }
+    };
+
+    protected final Handler<AscAbort> abortHandler = new Handler<AscAbort>() {
+        @Override
+        public void handle(AscAbort abort) {
+            LOG.debug("Aborted operation, will not handle it");
+        }
+    };
+
     {
         subscribe(initialAssignmentHandler, boot);
         subscribe(bootHandler, boot);
@@ -149,5 +169,7 @@ public class VSOverlayManager extends ComponentDefinition {
         subscribe(routeHandler, net);
         subscribe(deliverHandler, beb);
         subscribe(electHandler, meld);
+        subscribe(decideHandler, asc);
+        subscribe(abortHandler, asc);
     }
 }
