@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="64bbac2c-3d9c-4353-82a6-213a462dd2e8" name="Default" comment="EPFD">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/diagram" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/mp/AscAbort.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/mp/AscDecide.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/mp/AscPropose.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/mp/Propose.java" afterPath="" />
+    <list default="true" id="64bbac2c-3d9c-4353-82a6-213a462dd2e8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/target/classes/se/kth/id2203/kvstore/ClientService$5.class" afterPath="$PROJECT_DIR$/client/target/classes/se/kth/id2203/kvstore/ClientService$5.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/target/classes/se/kth/id2203/ParentComponent.class" afterPath="$PROJECT_DIR$/server/target/classes/se/kth/id2203/ParentComponent.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/target/classes/se/kth/id2203/bootstrapping/BootstrapClient$1.class" afterPath="$PROJECT_DIR$/server/target/classes/se/kth/id2203/bootstrapping/BootstrapClient$1.class" />
@@ -30,22 +25,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/target/classes/se/kth/id2203/overlay/VSOverlayManager$5.class" afterPath="$PROJECT_DIR$/server/target/classes/se/kth/id2203/overlay/VSOverlayManager$5.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/target/classes/se/kth/id2203/overlay/VSOverlayManager.class" afterPath="$PROJECT_DIR$/server/target/classes/se/kth/id2203/overlay/VSOverlayManager.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/main/java/se/kth/id2203/kvstore/ClientService.java" afterPath="$PROJECT_DIR$/client/src/main/java/se/kth/id2203/kvstore/ClientService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/ParentComponent.java" afterPath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/ParentComponent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/bootstrapping/BootstrapClient.java" afterPath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/bootstrapping/BootstrapClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/bootstrapping/BootstrapServer.java" afterPath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/bootstrapping/BootstrapServer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/bootstrapping/Bootstrapping.java" afterPath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/bootstrapping/Bootstrapping.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/kvstore/KVService.java" afterPath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/kvstore/KVService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/mp/Accept.java" afterPath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/mp/Accept.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/mp/AcceptAck.java" afterPath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/mp/AcceptAck.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/mp/Consensus.java" afterPath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/mp/Consensus.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/mp/Decide.java" afterPath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/mp/Decide.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/mp/MP.java" afterPath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/mp/MP.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/mp/MPBooted.java" afterPath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/mp/MPBooted.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/mp/Nack.java" afterPath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/mp/Nack.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/mp/Prepare.java" afterPath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/mp/Prepare.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/mp/PrepareAck.java" afterPath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/mp/PrepareAck.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/overlay/VSOverlayManager.java" afterPath="$PROJECT_DIR$/server/src/main/java/se/kth/id2203/overlay/VSOverlayManager.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/client/target/" />
@@ -85,8 +64,8 @@
       <file leaf-file-name="KVService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/src/main/java/se/kth/id2203/kvstore/KVService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="66" column="41" lean-forward="true" selection-start-line="66" selection-start-column="41" selection-end-line="66" selection-end-column="41" />
+            <state relative-caret-position="510">
+              <caret line="72" column="65" lean-forward="true" selection-start-line="72" selection-start-column="65" selection-end-line="72" selection-end-column="65" />
               <folding>
                 <element signature="e#2673#3269#0" expanded="false" />
                 <element signature="e#3268#3269#0" expanded="false" />
@@ -1214,7 +1193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1488206671118</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="EPFD">
+      <created>1488455607587</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1488455607587</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -1711,8 +1697,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/src/main/java/se/kth/id2203/kvstore/KVService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="66" column="41" lean-forward="true" selection-start-line="66" selection-start-column="41" selection-end-line="66" selection-end-column="41" />
+        <state relative-caret-position="510">
+          <caret line="72" column="65" lean-forward="true" selection-start-line="72" selection-start-column="65" selection-end-line="72" selection-end-column="65" />
           <folding>
             <element signature="e#2673#3269#0" expanded="false" />
             <element signature="e#3268#3269#0" expanded="false" />
